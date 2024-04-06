@@ -16,7 +16,10 @@ function gameOpener(){
         <p>Start Match</p>
     </div>
     <div class="start-menu" id="difficulty">
-        <p>Choose your belt</p>
+        <p>Choose your league</p>
+    </div>
+    <div class="start-menu" id="difficulty">
+        <p>Choose your difficultu</p>
     </div>
     <div class="start-menu" id="rules">
         <p>Tutorial</p>
