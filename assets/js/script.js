@@ -3,6 +3,55 @@ document.addEventListener('DOMContentLoaded', function(){
     attachEventListeners();
 });
 
+/*Quiz questions*/
+const premEasyQs = [
+    {
+        question: "Who won the Premier League in the 2019/2020 season?",
+        answers: [
+            {text: "Manchester United", correct: false},
+            {text: "Liverpool FC", correct: true},
+            {text: "Chelsea FC", correct: false},
+            {text: "Manchester City", correct: false}
+        ]
+    },
+    {
+        question: "Which player holds the record for the most Premier League goals?",
+        answers: [
+            {text: "Thierry Henry", correct: false},
+            {text: "Wayne Rooney", correct: false},
+            {text: "Alan Shearer", correct: true},
+            {text: "Sergio Agüero", correct: false}
+        ]
+    },
+    {
+        question: "Which team is known as the 'Spurs'?",
+        answers: [
+            {text: "Arsenal FC", correct: false},
+            {text: "Chelsea FC", correct: false},
+            {text: "West Ham United", correct: false},
+            {text: "Tottenham Hotspur", correct: true}
+        ]
+    },
+    {
+        question: "How many teams compete in the Premier League?",
+        answers: [
+            {text: "18", correct: false},
+            {text: "20", correct: true},
+            {text: "22", correct: false},
+            {text: "21", correct: false}
+        ]
+    },
+    {
+        question: "Who is the only player to have won the Premier League with three different clubs?",
+        answers: [
+            {text: "Nicolas Anelka", correct: false},
+            {text: "Ashley Cole", correct: true},
+            {text: "Carlos Tevez", correct: false},
+            {text: "Mark Schwarzer", correct: false}
+        ]
+    }
+]
+
 var mainScreen = document.querySelector('.main-screen')
 /*This function opens a welcome page for 3 seconds before diverting to the start page*/
 function gameOpener(){
@@ -109,22 +158,11 @@ function startGame(){
     </div>`
 }
 
-function diffChoice(){
-    mainScreen.innerHTML = `<div class="start-menu difficulty" id="easy">
-    <p>The League Cup</p>
-    </div>
-    <div class="start-menu difficulty" id="medium">
-    <p>The league</p>
-    </div>
-    <div class="start-menu difficulty" id="hard">
-    <p>The treble</p>
-    </div>`
-    attachDiffListener();
-}
 
 
 
-/*this function does not have placeholder text. This will determine the league choice by the user*/
+
+/*these functions do not have placeholder text. This will determine the league choice by the user*/
 function attachLeagueListener(){
     document.querySelector('#premier-league').addEventListener('click', function(){
         league = 'premier league';
@@ -143,7 +181,23 @@ function attachLeagueListener(){
     });
 };
 
+
+
 /*this determines and logs the users difficulty choice*/
+
+function diffChoice(){
+    mainScreen.innerHTML = `<div class="start-menu difficulty" id="easy">
+    <p>The League Cup</p>
+    </div>
+    <div class="start-menu difficulty" id="medium">
+    <p>The league</p>
+    </div>
+    <div class="start-menu difficulty" id="hard">
+    <p>The treble</p>
+    </div>`
+    attachDiffListener();
+};
+
 function attachDiffListener(){
     document.querySelector('#easy').addEventListener('click', function(){
         difficulty = 'easy';
@@ -160,4 +214,4 @@ function attachDiffListener(){
         console.log('Difficulty is set to hard')
         gameOpener2()
     })
-}
+};
