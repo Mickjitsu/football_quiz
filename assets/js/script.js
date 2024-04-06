@@ -58,6 +58,8 @@ function attachEventListeners(){
     const difficultyDiv = document.querySelector('#difficulty');
     const leagueDiv = document.querySelector('#league');
     const rulesDiv = document.querySelector('#rules');
+    const close = document.querySelector('.close')
+    const tutorial = document.querySelector('.tutorial')
 
     
     if(startDiv){
@@ -69,9 +71,16 @@ function attachEventListeners(){
     if(leagueDiv){
         leagueDiv.addEventListener('click', leagueChoice)
     };
-    if(rulesDiv){
-        rulesDiv.addEventListener('click', rulesPage)
-    };
+    if (rulesDiv){
+        rulesDiv.addEventListener('click', function(){
+            tutorial.classList.remove('hidden');
+        })
+    }
+    if(close){
+        close.addEventListener('click', function(){
+            tutorial.classList.add('hidden');
+        })
+    }
 
 };
 
