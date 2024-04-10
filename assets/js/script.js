@@ -232,8 +232,9 @@ function startGame(){
 
 const nextBtn = document.querySelector('#next-btn')
 
-function showQuestion(){
+    
 
+function showQuestion(){
     const questionElement = document.querySelector('#question')
     let currentQuestion =  premEasyQs[currentQuestionIndex];
     let questionNumber = currentQuestionIndex + 1;
@@ -246,10 +247,38 @@ function showQuestion(){
         button.textContent = answer.text;
         button.classList.add('btn');
         answerButton.appendChild(button);
+        if (answer.correct){
+            button.dataset.correct = answer.correct;
+        }
+        button.addEventListener('click', selectAnswer);
     })
 
     var difficulty = 'easy';
     var league = 'premier league';
 }
 
+function selectAnswer(e) {
+    const selectedButton = e.target;
+    const isCorrect = selectedButton.dataset.correct === 'true';
+
+    if (isCorrect) {
+        selectedButton.classList.add('correct');
+    } else {
+        selectedButton.classList.add('incorrect');
+    }
+
+    // Re-query for the answer buttons container and next button each time selectAnswer is called
+    const answerButtonsElement = document.querySelector('#answer-buttons');
+    const nextButton = document.querySelector('#next-btn');
+
+    Array.from(answerButtonsElement.children).forEach(button => {
+        if (button.dataset.correct === 'true') {
+            button.classList.add('correct');
+        }
+        button.disabled = true;
+    });
+
+    // Show the next button
+    nextButton.style.display = 'block';
+}
 

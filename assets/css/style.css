@@ -99,6 +99,14 @@ body{
     height: 2rem;
     width: 200px;
   }
+
+  .correct{
+    background-color: green;
+  }
+
+  .incorrect{
+    background-color: red;
+  }
 @media screen and (min-width: 920px){
     .main-screen{
         width: 700px;
