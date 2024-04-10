@@ -52,6 +52,11 @@ const premEasyQs = [
     }
 ]
 
+const answerElement = document.querySelectorAll('#answer-buttons');
+const nextButton = document.querySelector('#next-btn')
+let currentQuestionIndex = 0;
+
+
 var mainScreen = document.querySelector('.main-screen')
 /*This function opens a welcome page for 3 seconds before diverting to the start page*/
 function gameOpener(){
@@ -145,20 +150,6 @@ function leagueChoice(){
     </div>`
     attachLeagueListener()
 }
-/*the functions below have placeholder text for the time being*/
-function startGame(){
-    mainScreen.innerHTML = `<div class="start-menu leagues" id="premier-league">
-    <p>Premier League</p>
-    </div>
-    <div class="start-menu leagues" id="scottish-league">
-    <p>Scottish League</p>
-    </div>
-    <div class="start-menu leagues" id="la-liga">
-    <p>La Liga</p>
-    </div>`
-}
-
-
 
 
 
@@ -215,3 +206,50 @@ function attachDiffListener(){
         gameOpener2()
     })
 };
+
+
+/*Function to start the game*/
+function startGame(){
+    
+    if (difficulty === 'easy' && league === 'premier league'){
+    mainScreen.innerHTML = `<div class="game-area">
+    <h2>Premier league EFL Cup</h2>
+    </div>
+    <div class ='quiz'>
+        <h3 id='question'>Insert question here</h3>
+        <div id='answer-buttons'>
+            
+        </div>
+            <button id='next-btn' class='btn'>Next Question </button>
+        </div>`
+        
+
+        showQuestion();}
+        else {
+            alert('You need to set your difficulty and choose a league')
+        }
+}
+
+const nextBtn = document.querySelector('#next-btn')
+
+function showQuestion(){
+
+    const questionElement = document.querySelector('#question')
+    let currentQuestion =  premEasyQs[currentQuestionIndex];
+    let questionNumber = currentQuestionIndex + 1;
+    const answerButton = document.querySelector('#answer-buttons')
+
+    questionElement.textContent = `${currentQuestionIndex + 1}. ${currentQuestion.question}`;
+
+    currentQuestion.answers.forEach(answer => {
+        const button = document.createElement('button');
+        button.textContent = answer.text;
+        button.classList.add('btn');
+        answerButton.appendChild(button);
+    })
+
+    var difficulty = 'easy';
+    var league = 'premier league';
+}
+
+
