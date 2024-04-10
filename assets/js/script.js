@@ -230,7 +230,7 @@ function startGame(){
         }
 }
 
-const nextBtn = document.querySelector('#next-btn')
+
 
     
 
@@ -239,6 +239,7 @@ function showQuestion(){
     let currentQuestion =  premEasyQs[currentQuestionIndex];
     let questionNumber = currentQuestionIndex + 1;
     const answerButton = document.querySelector('#answer-buttons')
+    const nextBtn = document.querySelector('#next-btn')
 
     questionElement.textContent = `${currentQuestionIndex + 1}. ${currentQuestion.question}`;
 
@@ -252,7 +253,7 @@ function showQuestion(){
         }
         button.addEventListener('click', selectAnswer);
     })
-
+    nextBtn.style.display = 'none'
     var difficulty = 'easy';
     var league = 'premier league';
 }
@@ -269,7 +270,7 @@ function selectAnswer(e) {
 
     // Re-query for the answer buttons container and next button each time selectAnswer is called
     const answerButtonsElement = document.querySelector('#answer-buttons');
-    const nextButton = document.querySelector('#next-btn');
+    nextBtn = document.querySelector('#next-btn');
 
     Array.from(answerButtonsElement.children).forEach(button => {
         if (button.dataset.correct === 'true') {
@@ -279,6 +280,6 @@ function selectAnswer(e) {
     });
 
     // Show the next button
-    nextButton.style.display = 'block';
+    nextBtn.style.display = 'block';
 }
 
