@@ -1,6 +1,5 @@
-document.addEventListener('DOMContentLoaded', function(){
+document.addEventListener('DOMContentLoaded', function() {
     gameOpener();
-    attachEventListeners();
 });
 
 /*Quiz questions*/
@@ -52,38 +51,29 @@ const premEasyQs = [
     }
 ]
 
-const answerElement = document.querySelectorAll('#answer-buttons');
-const nextButton = document.querySelector('#next-btn')
 let currentQuestionIndex = 0;
+let currentScore = 0;
+let difficulty; // Define difficulty
+let league; // Define league
 
+var mainScreen = document.querySelector('.main-screen');
 
-var mainScreen = document.querySelector('.main-screen')
-/*This function opens a welcome page for 3 seconds before diverting to the start page*/
-function gameOpener(){
-    setTimeout(function(){
+function gameOpener() {
+    setTimeout(function() {
         var welcomeDiv = document.querySelector('.welcome');
         if (welcomeDiv) welcomeDiv.classList.add('hidden');
 
-
-        if(mainScreen){mainScreen.classList.remove('hidden');
-
-        mainScreen.innerHTML = `<div class="start-menu" id="start-match">
-        <p>Start Match</p>
-    </div>
-    <div class="start-menu" id="league">
-        <p>Choose your league</p>
-    </div>
-    <div class="start-menu" id="difficulty">
-        <p>Choose your difficulty</p>
-    </div>
-    <div class="start-menu" id="rules">
-        <p>Tutorial</p>
-    </div>`
-
-    attachEventListeners();
-}
-    
-    },3000);
+        if (mainScreen) {
+            mainScreen.classList.remove('hidden');
+            mainScreen.innerHTML = `
+                <div class="start-menu" id="start-match"><p>Start Match</p></div>
+                <div class="start-menu" id="league"><p>Choose your league</p></div>
+                <div class="start-menu" id="difficulty"><p>Choose your difficulty</p></div>
+                <div class="start-menu" id="rules"><p>Tutorial</p></div>
+            `;
+            attachEventListeners();
+        }
+    }, 3000);
 }
 
 /*this allows users to be able to return to the main screen without a 3 second delay*/
@@ -208,78 +198,86 @@ function attachDiffListener(){
 };
 
 
-/*Function to start the game*/
-function startGame(){
-    
-    if (difficulty === 'easy' && league === 'premier league'){
-    mainScreen.innerHTML = `<div class="game-area">
-    <h2>Premier league EFL Cup</h2>
-    </div>
-    <div class ='quiz'>
-        <h3 id='question'>Insert question here</h3>
-        <div id='answer-buttons'>
-            
-        </div>
-            <button id='next-btn' class='btn'>Next Question </button>
-        </div>`
-        
 
-        showQuestion();}
-        else {
-            alert('You need to set your difficulty and choose a league')
-        }
+/*Function to start the game*/
+function startGame() {
+    if (difficulty === 'easy' && league === 'premier league') {
+        mainScreen.innerHTML = `
+            <div class="game-area"><h2>Premier League EFL Cup</h2></div>
+            <div class='quiz'>
+                <h3 id='question'>Insert question here</h3>
+                <div id='answer-buttons'></div>
+                <button id='next-btn' class='btn' style='display: none;'>Next Question</button>
+            </div>
+        `;
+        currentScore = 0;
+        currentQuestionIndex = 0; // Reset question index
+        showQuestion();
+        document.querySelector('#next-btn').addEventListener('click', nextButtonHandle); // Attach event listener after the button is added to the DOM
+    } else {
+        alert('You need to set your difficulty and choose a league');
+    }
 }
 
+function showQuestion() {
+    const questionElement = document.querySelector('#question');
+    const answerButtonsElement = document.querySelector('#answer-buttons');
+    const nextBtn = document.querySelector('#next-btn');
 
+    if (currentQuestionIndex < premEasyQs.length) {
+        const currentQuestion = premEasyQs[currentQuestionIndex];
+        questionElement.textContent = `${currentQuestionIndex + 1}. ${currentQuestion.question}`;
+        answerButtonsElement.innerHTML = ''; // Clear previous answers
 
-    
+        currentQuestion.answers.forEach(answer => {
+            const button = document.createElement('button');
+            button.textContent = answer.text;
+            button.classList.add('btn');
+            if (answer.correct) {
+                button.dataset.correct = answer.correct;
+            }
+            button.addEventListener('click', selectAnswer);
+            answerButtonsElement.appendChild(button);
+        });
 
-function showQuestion(){
-    const questionElement = document.querySelector('#question')
-    let currentQuestion =  premEasyQs[currentQuestionIndex];
-    let questionNumber = currentQuestionIndex + 1;
-    const answerButton = document.querySelector('#answer-buttons')
-    const nextBtn = document.querySelector('#next-btn')
-
-    questionElement.textContent = `${currentQuestionIndex + 1}. ${currentQuestion.question}`;
-
-    currentQuestion.answers.forEach(answer => {
-        const button = document.createElement('button');
-        button.textContent = answer.text;
-        button.classList.add('btn');
-        answerButton.appendChild(button);
-        if (answer.correct){
-            button.dataset.correct = answer.correct;
-        }
-        button.addEventListener('click', selectAnswer);
-    })
-    nextBtn.style.display = 'none'
-    var difficulty = 'easy';
-    var league = 'premier league';
+        nextBtn.style.display = 'none'; 
+    } else {
+        // Handle quiz end
+        console.log("Quiz finished. Score:", currentScore);
+        mainScreen.innerHTML = `<div class="game-area"><h2>Quiz Complete</h2></div>
+        <div class='quiz'>
+            <h3 id='question'>Congratulations, you scored ${currentScore} out of 5!</h3>
+            <div id='answer-buttons'></div>
+            <button id='next-btn' class='btn' style='display: none;'>Next Question</button>
+        </div>`
+        
+    }
 }
 
 function selectAnswer(e) {
     const selectedButton = e.target;
-    const isCorrect = selectedButton.dataset.correct === 'true';
+    const correct = selectedButton.dataset.correct === 'true';
+    const answerButtonsElement = document.querySelector('#answer-buttons');
+    const nextBtn = document.querySelector('#next-btn');
 
-    if (isCorrect) {
+    if (correct) {
         selectedButton.classList.add('correct');
+        currentScore++;
     } else {
         selectedButton.classList.add('incorrect');
     }
 
-    // Re-query for the answer buttons container and next button each time selectAnswer is called
-    const answerButtonsElement = document.querySelector('#answer-buttons');
-    nextBtn = document.querySelector('#next-btn');
-
     Array.from(answerButtonsElement.children).forEach(button => {
+        button.disabled = true;
         if (button.dataset.correct === 'true') {
             button.classList.add('correct');
         }
-        button.disabled = true;
     });
 
-    // Show the next button
-    nextBtn.style.display = 'block';
+    nextBtn.style.display = 'block'; // Show the next button
 }
 
+function nextButtonHandle() {
+    currentQuestionIndex++;
+    showQuestion(); // Call showQuestion to update the quiz for the next question
+}
