@@ -247,12 +247,16 @@ function showQuestion() {
         mainScreen.innerHTML = `<div class="game-area"><h2>Quiz Complete</h2></div>
         <div class='quiz'>
             <h3 id='question'>Congratulations, you scored ${currentScore} out of 5!</h3>
-            <div id='answer-buttons'></div>
-            <button id='next-btn' class='btn' style='display: none;'>Next Question</button>
+            
+            <button id='home-btn' class='btn' style='display: block;'>Return Home</button>
         </div>`
-        
+        const homeBtn = document.querySelector('#home-btn');
+        homeBtn.addEventListener('click', gameOpener2);
     }
+   
 }
+
+
 
 function selectAnswer(e) {
     const selectedButton = e.target;
