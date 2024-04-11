@@ -51,6 +51,99 @@ const premEasyQs = [
     }
 ]
 
+const premMediumQs = [
+    {
+        question: "Who won the Premier League Golden Boot for the 2017-2018 season?",
+        answers: [
+            {text: "Harry Kane", correct: false},
+            {text: "Sergio Agüero", correct: false},
+            {text: "Mohamed Salah", correct: true},
+            {text: "Pierre-Emerick Aubameyang", correct: false}
+        ]
+    },
+    {
+        question: "Which club holds the record for the fewest points in a Premier League season?",
+        answers: [
+            {text: "Sunderland", correct: false},
+            {text: "Derby County", correct: true},
+            {text: "Aston Villar", correct: false},
+            {text: "Huddersfield Town", correct: false}
+        ]
+    },
+    {
+        question: "Who is the youngest player to appear in the Premier League?",
+        answers: [
+            {text: "Harvey Elliott", correct: false},
+            {text: "James Vaughan", correct: true},
+            {text: "Wayne Rooney", correct: false},
+            {text: "Ethan Ampadu", correct: false}
+        ]
+    },
+    {
+        question: "What was unique about Arsenal's 2003-2004 Premier League season?",
+        answers: [
+            {text: "They won all their home games.", correct: false},
+            {text: "They did not lose a single match.", correct: true},
+            {text: "They scored in every match.", correct: false},
+            {text: "They won the league without any English players.", correct: false}
+        ]
+    },
+    {
+        question: "Which player has the most Premier League red cards?",
+        answers: [
+            {text: "Patrick Vieira", correct: false},
+            {text: "Richard Dunne", correct: false},
+            {text: "Duncan Ferguson", correct: true},
+            {text: "Roy Keane", correct: false}
+        ]
+    },
+    {
+        question: "As of the end of the 2022-2023 season, which club has been relegated from the Premier League the most times?",
+        answers: [
+            {text: "Norwich City", correct: true},
+            {text: "West Bromwich Albion", correct: false},
+            {text: "Sunderland", correct: false},
+            {text: "Crystal Palace", correct: false}
+        ]
+    },
+    {
+        question: "Who was the first player to reach 100 Premier League assists?",
+        answers: [
+            {text: "David Beckham", correct: false},
+            {text: "Ryan Giggs", correct: true},
+            {text: "Cesc Fàbregas", correct: false},
+            {text: "Kevin De Bruyne", correct: false}
+        ]
+    },
+    {
+        question: "Who was the first manager to win the Premier League with two different clubs?",
+        answers: [
+            {text: "José Mourinho", correct: false},
+            {text: "Pep Guardiola", correct: false},
+            {text: "Carlo Ancelotti", correct: true},
+            {text: "Alex Ferguson", correct: false}
+        ]
+    },
+    {
+        question: "Which club achieved the longest unbeaten run in Premier League history?",
+        answers: [
+            {text: "Chelsea", correct: false},
+            {text: "Manchester United", correct: false},
+            {text: "Arsenal", correct: true},
+            {text: "Liverpool", correct: false}
+        ]
+    },
+    {
+        question: "What is the highest number of points achieved by a club in a single Premier League season?",
+        answers: [
+            {text: "100 points", correct: true},
+            {text: "95 points", correct: false},
+            {text: "102 points", correct: false},
+            {text: "98 points", correct: false}
+        ]
+    }
+]
+
 let currentQuestionIndex = 0;
 let currentScore = 0;
 let difficulty; // Define difficulty
