@@ -873,11 +873,11 @@ for (let i = 0; i < allQuestions.length; i++ ){
 
 
 
-
+let questions =[];
 
 /*Function to start the game*/
 function startGame() {
-    let questions =[];
+    
     if(league === 'premier league'){
         if (difficulty === 'easy'){
             questions = premEasyQs;
