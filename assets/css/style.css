@@ -107,6 +107,16 @@ body{
   .incorrect{
     background-color: red;
   }
+  .quiz{
+    align-items: center;
+    text-align: center;
+    width: 600px;
+    padding: 20px;
+  }
+  #answer-buttons{
+    align-items:start;
+  }
+  
 @media screen and (min-width: 920px){
     .main-screen{
         width: 700px;

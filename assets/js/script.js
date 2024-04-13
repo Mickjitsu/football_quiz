@@ -475,6 +475,240 @@ const scotHardQs = [
     }
 ];
 
+/*La Liga questions*/
+const laLigaEasyQs = [
+    {
+        question: "Which club has won the most La Liga titles?",
+        answers: [
+            {text: "Barcelona", correct: false},
+            {text: "Real Madrid", correct: true},
+            {text: "Atletico Madrid", correct: false},
+            {text: "Valencia", correct: false}
+        ]
+    },
+    {
+        question: "Who is known as 'El Clásico' rivals?",
+        answers: [
+            {text: "Barcelona and Valencia", correct: false},
+            {text: "Real Madrid and Atletico Madrid", correct: false},
+            {text: "Barcelona and Real Madrid", correct: true},
+            {text: "Sevilla and Betis", correct: false}
+        ]
+    },
+    {
+        question: "In which city is the Camp Nou stadium located?",
+        answers: [
+            {text: "Madrid", correct: false},
+            {text: "Barcelona", correct: true},
+            {text: "Valencia", correct: false},
+            {text: "Seville", correct: false}
+        ]
+    },
+    {
+        question: "Which player has won the most Ballon d'Or awards while playing in La Liga?",
+        answers: [
+            {text: "Cristiano Ronaldo", correct: false},
+            {text: "Lionel Messi", correct: true},
+            {text: "Zinedine Zidane", correct: false},
+            {text: "Ronaldinho", correct: false}
+        ]
+    },
+    {
+        question: "What is the nickname for Atletico Madrid?",
+        answers: [
+            {text: "Los Blancos", correct: false},
+            {text: "Los Che", correct: false},
+            {text: "Los Colchoneros", correct: true},
+            {text: "Los Leones", correct: false}
+        ]
+    }
+];
+
+const laLigaMediumQs = [
+    {
+        question: "Who holds the record for the most goals in a single La Liga season?",
+        answers: [
+            {text: "Lionel Messi", correct: true},
+            {text: "Cristiano Ronaldo", correct: false},
+            {text: "Telmo Zarra", correct: false},
+            {text: "Hugo Sanchez", correct: false}
+        ]
+    },
+    {
+        question: "Which team won their first La Liga title in the 21st century?",
+        answers: [
+            {text: "Real Sociedad", correct: false},
+            {text: "Deportivo La Coruña", correct: true},
+            {text: "Valencia", correct: false},
+            {text: "Sevilla", correct: false}
+        ]
+    },
+    {
+        question: "As of 2021, which player has made the most appearances in La Liga?",
+        answers: [
+            {text: "Andoni Zubizarreta", correct: true},
+            {text: "Raúl Gonzalez", correct: false},
+            {text: "Iker Casillas", correct: false},
+            {text: "Xavi Hernandez", correct: false}
+        ]
+    },
+    {
+        question: "Which La Liga team is known as 'Los Armeros' (The Gunsmiths)?",
+        answers: [
+            {text: "Eibar", correct: true},
+            {text: "Alavés", correct: false},
+            {text: "Villarreal", correct: false},
+            {text: "Getafe", correct: false}
+        ]
+    },
+    {
+        question: "Who was the first player to score in 21 consecutive La Liga seasons?",
+        answers: [
+            {text: "Lionel Messi", correct: true},
+            {text: "Raul Gonzalez", correct: false},
+            {text: "Sergio Ramos", correct: false},
+            {text: "Karim Benzema", correct: false}
+        ]
+    },
+    {
+        question: "What is the record for the most points in a single La Liga season?",
+        answers: [
+            {text: "100 points", correct: true},
+            {text: "98 points", correct: false},
+            {text: "96 points", correct: false},
+            {text: "94 points", correct: false}
+        ]
+    },
+    {
+        question: "Which club is known for its policy of signing Basque players only?",
+        answers: [
+            {text: "Real Sociedad", correct: false},
+            {text: "Athletic Bilbao", correct: true},
+            {text: "Osasuna", correct: false},
+            {text: "Alavés", correct: false}
+        ]
+    },
+    {
+        question: "Who is the youngest player to debut in La Liga?",
+        answers: [
+            {text: "Ansu Fati", correct: false},
+            {text: "Luka Romero", correct: true},
+            {text: "Bojan Krkić", correct: false},
+            {text: "Martin Odegaard", correct: false}
+        ]
+    },
+    {
+        question: "Which team broke the duopoly of Barcelona and Real Madrid by winning La Liga in the 2013-2014 season?",
+        answers: [
+            {text: "Valencia", correct: false},
+            {text: "Atletico Madrid", correct: true},
+            {text: "Sevilla", correct: false},
+            {text: "Villarreal", correct: false}
+        ]
+    },
+    {
+        question: "What is the capacity of Real Madrid's Santiago Bernabeu Stadium after its latest renovation?",
+        answers: [
+            {text: "81,044", correct: true},
+            {text: "78,000", correct: false},
+            {text: "75,000", correct: false},
+            {text: "85,454", correct: false}
+        ]
+    }
+];
+
+const laLigaHardQs = [
+    {
+        question: "Which club won La Liga in the 1999-2000 season, breaking a 19-year drought?",
+        answers: [
+            {text: "Deportivo La Coruña", correct: true},
+            {text: "Valencia", correct: false},
+            {text: "Real Sociedad", correct: false},
+            {text: "Atletico Madrid", correct: false}
+        ]
+    },
+    {
+        question: "Who was the first African player to win the Pichichi Trophy as La Liga's top scorer?",
+        answers: [
+            {text: "Samuel Eto'o", correct: true},
+            {text: "Yaya Toure", correct: false},
+            {text: "Seydou Keita", correct: false},
+            {text: "Frederic Kanoute", correct: false}
+        ]
+    },
+    {
+        question: "Which player scored the fastest hat-trick in La Liga history?",
+        answers: [
+            {text: "Cristiano Ronaldo", correct: false},
+            {text: "Lionel Messi", correct: false},
+            {text: "David Villa", correct: false},
+            {text: "Beñat San José", correct: true}
+        ]
+    },
+    {
+        question: "In what year did La Liga introduce the VAR (Video Assistant Referee) system?",
+        answers: [
+            {text: "2017", correct: false},
+            {text: "2018", correct: true},
+            {text: "2019", correct: false},
+            {text: "2020", correct: false}
+        ]
+    },
+    {
+        question: "Which club has the distinction of never being relegated from La Liga?",
+        answers: [
+            {text: "Barcelona", correct: true},
+            {text: "Real Madrid", correct: true},
+            {text: "Athletic Bilbao", correct: true},
+            {text: "All of the above", correct: true}
+        ]
+    },
+    {
+        question: "What unique achievement did Athletic Bilbao's Telmo Zarra hold for decades?",
+        answers: [
+            {text: "Most goals in a single season", correct: false},
+            {text: "Most La Liga titles", correct: false},
+            {text: "Most career La Liga goals", correct: true},
+            {text: "Most career La Liga assists", correct: false}
+        ]
+    },
+    {
+        question: "Which goalkeeper has the most Zamora Trophies for the fewest goals conceded in a season?",
+        answers: [
+            {text: "Iker Casillas", correct: false},
+            {text: "Victor Valdes", correct: false},
+            {text: "Antoni Ramallets", correct: true},
+            {text: "Jan Oblak", correct: true}
+        ]
+    },
+    {
+        question: "Which La Liga club is known as 'Los Granotas' (The Frogs)?",
+        answers: [
+            {text: "Levante", correct: true},
+            {text: "Real Betis", correct: false},
+            {text: "Villarreal", correct: false},
+            {text: "Celta Vigo", correct: false}
+        ]
+    },
+    {
+        question: "Who was the first player to win the European Golden Shoe while playing in La Liga?",
+        answers: [
+            {text: "Hugo Sanchez", correct: true},
+            {text: "Lionel Messi", correct: false},
+            {text: "Cristiano Ronaldo", correct: false},
+            {text: "Diego Forlan", correct: false}
+        ]
+    },
+    {
+        question: "Which team has the record for the longest streak without conceding a goal in La Liga?",
+        answers: [
+            {text: "Atletico Madrid", correct: true},
+            {text: "Barcelona", correct: false},
+            {text: "Real Madrid", correct: false},
+            {text: "Valencia", correct: false}
+        ]
+    }
+];
 
 
 let currentQuestionIndex = 0;
@@ -582,7 +816,7 @@ function attachLeagueListener(){
         gameOpener2()
     });
     document.querySelector('#la-liga').addEventListener('click', function(){
-        league = 'La liga';
+        league = 'la liga';
         console.log('The league is set to the Spanish La Liga')
         gameOpener2()
     });
@@ -632,18 +866,46 @@ function startGame() {
             questions = premEasyQs;
         } else if(difficulty === 'medium'){
             questions = premMediumQs;
-        }else{
+        }else if(difficulty === 'hard'){
+            questions = premHardQs;
+        }
+        else{
+            alert('Please choose a valid league and difficulty');
+        };
+    };
+    if(league === 'scottish league'){
+        if (difficulty === 'easy'){
+            questions = scotEasyQs;
+        } else if(difficulty === 'medium'){
+            questions = scotMediumQs;
+        }else if(difficulty === 'hard'){
+            questions = scotHardQs;
+        }
+        else{
+            alert('Please choose a valid league and difficulty');
+        };
+    };
+    if(league === 'la liga'){
+        if (difficulty === 'easy'){
+            questions = laLigaEasyQs;
+        } else if(difficulty === 'medium'){
+            questions = laLigaMediumQs;
+        }else if(difficulty === 'hard'){
+            questions = laLigaHardQs;
+        }
+        else{
             alert('Please choose a valid league and difficulty');
         };
     }
-
     if (questions.length > 0){
         mainScreen.innerHTML = `
                 <div class="game-area"><h2>Premier League EFL Cup</h2></div>
                 <div class='quiz'>
                     <h3 id='question'>Insert question here</h3>
                     <div id='answer-buttons'></div>
+                    
                     <button id='next-btn' class='btn' style='display: none;'>Next Question</button>
+                    
                 </div>
             `;
             currentScore = 0;
