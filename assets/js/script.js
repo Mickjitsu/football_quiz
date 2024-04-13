@@ -856,11 +856,28 @@ function attachDiffListener(){
         gameOpener2()
     })
 };
+/*https://www.javatpoint.com/how-to-shuffle-an-array-in-javascript how to shuffle array*/
+function shuffle(array) {  
+    for (let i = array.length - 1; i> 0; i--) {  
+    const j = Math.floor(Math.random() * (i + 1));  
+    [array[i], array[j]] = [array[j], array[i]];  
+    }}
+const allQuestions = [premEasyQs, premMediumQs, premHardQs, scotEasyQs, scotMediumQs, scotHardQs, laLigaEasyQs, laLigaMediumQs, laLigaHardQs]
+for (let i = 0; i < allQuestions.length; i++ ){
+    shuffle(allQuestions[i]);
+
+    for (let j = 0; j < allQuestions[i].length; j++){
+        shuffle(allQuestions[i][j].answers);
+    }
+}
 
 
-let questions =[];
+
+
+
 /*Function to start the game*/
 function startGame() {
+    let questions =[];
     if(league === 'premier league'){
         if (difficulty === 'easy'){
             questions = premEasyQs;
