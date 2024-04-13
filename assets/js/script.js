@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 /*Quiz questions*/
+/*premier league*/
 const premEasyQs = [
     {
         question: "Who won the Premier League in the 2019/2020 season?",
@@ -50,6 +51,8 @@ const premEasyQs = [
         ]
     }
 ]
+
+
 
 const premMediumQs = [
     {
@@ -143,6 +146,336 @@ const premMediumQs = [
         ]
     }
 ]
+
+const premHardQs = [
+    {
+        question: "Which player scored the fastest goal in Premier League history?",
+        answers: [
+            {text: "Shane Long", correct: true},
+            {text: "Ledley King", correct: false},
+            {text: "Alan Shearer", correct: false},
+            {text: "Christian Eriksen", correct: false}
+        ]
+    },
+    {
+        question: "In which season did the Premier League first introduce the use of goal-line technology?",
+        answers: [
+            {text: "2012-2013", correct: false},
+            {text: "2013-2014", correct: true},
+            {text: "2014-2015", correct: false},
+            {text: "2015-2016", correct: false}
+        ]
+    },
+    {
+        question: "Who was the first non-European manager to win the Premier League?",
+        answers: [
+            {text: "Arsène Wenger", correct: true},
+            {text: "José Mourinho", correct: false},
+            {text: "Manuel Pellegrini", correct: false},
+            {text: "Claudio Ranieri", correct: false}
+        ]
+    },
+    {
+        question: "Which team finished in the highest position in their debut Premier League season?",
+        answers: [
+            {text: "Reading", correct: false},
+            {text: "Ipswich Town", correct: true},
+            {text: "Nottingham Forest", correct: false},
+            {text: "Wigan Athletic", correct: false}
+        ]
+    },
+    {
+        question: "Who is the only player to have won the Premier League with three different clubs?",
+        answers: [
+            {text: "Nicolas Anelka", correct: false},
+            {text: "Ashley Cole", correct: false},
+            {text: "Carlos Tevez", correct: false},
+            {text: "Robert Huth", correct: true}
+        ]
+    },
+    {
+        question: "What was the first season in which the Premier League was composed of 20 teams?",
+        answers: [
+            {text: "1994-1995", correct: false},
+            {text: "1995-1996", correct: true},
+            {text: "1992-1993", correct: false},
+            {text: "1993-1994", correct: false}
+        ]
+    },
+    {
+        question: "Which club set a record for the most consecutive Premier League losses?",
+        answers: [
+            {text: "Sunderland", correct: true},
+            {text: "Derby County", correct: false},
+            {text: "Norwich City", correct: false},
+            {text: "Portsmouth", correct: false}
+        ]
+    },
+    {
+        question: "Who is the highest-scoring midfielder in Premier League history?",
+        answers: [
+            {text: "Frank Lampard", correct: true},
+            {text: "Steven Gerrard", correct: false},
+            {text: "Ryan Giggs", correct: false},
+            {text: "Paul Scholes", correct: false}
+        ]
+    },
+    {
+        question: "Which goalkeeper has the most clean sheets in Premier League history?",
+        answers: [
+            {text: "David Seaman", correct: false},
+            {text: "Petr Čech", correct: true},
+            {text: "Edwin van der Sar", correct: false},
+            {text: "Peter Schmeichel", correct: false}
+        ]
+    },
+    {
+        question: "Which player has made the most Premier League appearances without ever winning the title?",
+        answers: [
+            {text: "Gareth Barry", correct: true},
+            {text: "Jamie Carragher", correct: false},
+            {text: "Mark Schwarzer", correct: false},
+            {text: "Leighton Baines", correct: false}
+        ]
+    }
+];
+
+/*Scottish league*/
+const scotEasyQs = [
+    {
+        question: "Which team has won the most Scottish Premiership titles?",
+        answers: [
+            {text: "Celtic", correct: true},
+            {text: "Rangers", correct: false},
+            {text: "Aberdeen", correct: false},
+            {text: "Heart of Midlothian", correct: false}
+        ]
+    },
+    {
+        question: "What color are the home jerseys of Rangers Football Club?",
+        answers: [
+            {text: "Red", correct: false},
+            {text: "Green", correct: false},
+            {text: "Blue", correct: true},
+            {text: "Yellow", correct: false}
+        ]
+    },
+    {
+        question: "In which city is the Scottish Premiership team Hibernian based?",
+        answers: [
+            {text: "Glasgow", correct: false},
+            {text: "Edinburgh", correct: true},
+            {text: "Aberdeen", correct: false},
+            {text: "Dundee", correct: false}
+        ]
+    },
+    {
+        question: "Which of the following teams has never won the Scottish Premiership?",
+        answers: [
+            {text: "Celtic", correct: false},
+            {text: "Rangers", correct: false},
+            {text: "Kilmarnock", correct: false},
+            {text: "Inverness Caledonian Thistle", correct: true}
+        ]
+    },
+    {
+        question: "What is the nickname of Heart of Midlothian Football Club?",
+        answers: [
+            {text: "The Saints", correct: false},
+            {text: "The Jambos", correct: true},
+            {text: "The Dons", correct: false},
+            {text: "The Hibees", correct: false}
+        ]
+    }
+];
+
+
+const scotMediumQs = [
+    {
+        question: "Which Scottish Premiership team is known as 'The Dons'?",
+        answers: [
+            {text: "Dundee United", correct: false},
+            {text: "Aberdeen", correct: true},
+            {text: "Ross County", correct: false},
+            {text: "St Johnstone", correct: false}
+        ]
+    },
+    {
+        question: "In what year did the Scottish Premiership replace the Scottish Premier League (SPL)?",
+        answers: [
+            {text: "2010", correct: false},
+            {text: "2013", correct: true},
+            {text: "2016", correct: false},
+            {text: "2018", correct: false}
+        ]
+    },
+    {
+        question: "Which player holds the record for the most goals in a single Scottish Premiership season?",
+        answers: [
+            {text: "Henrik Larsson", correct: false},
+            {text: "Alfredo Morelos", correct: false},
+            {text: "Brian Laudrup", correct: false},
+            {text: "Kris Boyd", correct: true}
+        ]
+    },
+    {
+        question: "Which club's home ground is called Pittodrie Stadium?",
+        answers: [
+            {text: "Dundee", correct: false},
+            {text: "Aberdeen", correct: true},
+            {text: "Hamilton Academical", correct: false},
+            {text: "Kilmarnock", correct: false}
+        ]
+    },
+    {
+        question: "Who was named the Scottish Premiership Player of the Year for the 2019-2020 season?",
+        answers: [
+            {text: "Odsonne Édouard", correct: true},
+            {text: "Alfredo Morelos", correct: false},
+            {text: "James Forrest", correct: false},
+            {text: "Callum McGregor", correct: false}
+        ]
+    },
+    {
+        question: "Which team was promoted to the Scottish Premiership for the 2020-2021 season?",
+        answers: [
+            {text: "Heart of Midlothian", correct: false},
+            {text: "Dundee United", correct: true},
+            {text: "Dunfermline Athletic", correct: false},
+            {text: "Partick Thistle", correct: false}
+        ]
+    },
+    {
+        question: "What is the maximum capacity of Celtic Park?",
+        answers: [
+            {text: "52,063", correct: false},
+            {text: "60,832", correct: true},
+            {text: "48,500", correct: false},
+            {text: "50,947", correct: false}
+        ]
+    },
+    {question: "What is the maximum capacity of Ibrox Stadium, home of Rangers FC?",
+        answers: [
+            {text: "50,817", correct: true},
+            {text: "60,000", correct: false},
+            {text: "48,500", correct: false},
+            {text: "52,063", correct: false}
+        ]
+    },
+    {
+        question: "Which manager led Celtic to a treble-treble (three consecutive domestic trebles)?",
+        answers: [
+            {text: "Neil Lennon", correct: false},
+            {text: "Brendan Rodgers", correct: true},
+            {text: "Gordon Strachan", correct: false},
+            {text: "Martin O'Neill", correct: false}
+        ]
+    },
+    {
+        question: "Which of these clubs has not played in the Scottish Premiership since its inception in 2013?",
+        answers: [
+            {text: "Raith Rovers", correct: true},
+            {text: "Livingston", correct: false},
+            {text: "Ross County", correct: false},
+            {text: "Partick Thistle", correct: false}
+        ]
+    }
+];
+
+const scotHardQs = [
+    {
+        question: "Who was the first player to win the Scottish Premiership Player of the Year award?",
+        answers: [
+            {text: "Brian Laudrup", correct: false},
+            {text: "Henrik Larsson", correct: false},
+            {text: "Ally McCoist", correct: true},
+            {text: "Scott Brown", correct: false}
+        ]
+    },
+    {
+        question: "Which Scottish Premiership club is based in Dingwall?",
+        answers: [
+            {text: "Ross County", correct: true},
+            {text: "Inverness Caledonian Thistle", correct: false},
+            {text: "Elgin City", correct: false},
+            {text: "Forfar Athletic", correct: false}
+        ]
+    },
+    {
+        question: "What was the original name of the Scottish Premiership when it was founded?",
+        answers: [
+            {text: "Scottish Football League", correct: false},
+            {text: "Scottish Premier Division", correct: true},
+            {text: "Scottish Premier League", correct: false},
+            {text: "Scottish National League", correct: false}
+        ]
+    },
+    {
+        question: "Which player has won the most Scottish Premiership titles as of 2021?",
+        answers: [
+            {text: "Ryan Giggs", correct: false},
+            {text: "Steven Gerrard", correct: false},
+            {text: "Scott Brown", correct: true},
+            {text: "Kris Boyd", correct: false}
+        ]
+    },
+    {
+        question: "Which Scottish Premiership club has the nickname 'The Doonhamers'?",
+        answers: [
+            {text: "Queen of the South", correct: true},
+            {text: "Ayr United", correct: false},
+            {text: "Dunfermline Athletic", correct: false},
+            {text: "Raith Rovers", correct: false}
+        ]
+    },
+    {
+        question: "In which year did the Scottish Premiership switch to its current name from the Scottish Premier League?",
+        answers: [
+            {text: "2010", correct: false},
+            {text: "2013", correct: true},
+            {text: "2015", correct: false},
+            {text: "2012", correct: false}
+        ]
+    },
+    {
+        question: "Who holds the record for the most appearances in the Scottish Premiership?",
+        answers: [
+            {text: "Gordon Strachan", correct: false},
+            {text: "Alex McLeish", correct: false},
+            {text: "Willie Miller", correct: true},
+            {text: "Danny McGrain", correct: false}
+        ]
+    },
+    {
+        question: "Which Scottish Premiership team has their stadium located closest to the sea?",
+        answers: [
+            {text: "Aberdeen", correct: true},
+            {text: "Celtic", correct: false},
+            {text: "Rangers", correct: false},
+            {text: "Inverness Caledonian Thistle", correct: false}
+        ]
+    },
+    {
+        question: "Which team won the first Scottish Premiership title after its rebranding in 2013?",
+        answers: [
+            {text: "Celtic", correct: true},
+            {text: "Rangers", correct: false},
+            {text: "Aberdeen", correct: false},
+            {text: "Dundee United", correct: false}
+        ]
+    },
+    {
+        question: "What is the record for the highest number of points in a single Scottish Premiership season?",
+        answers: [
+            {text: "106 points", correct: true},
+            {text: "97 points", correct: false},
+            {text: "89 points", correct: false},
+            {text: "102 points", correct: false}
+        ]
+    }
+];
+
+
 
 let currentQuestionIndex = 0;
 let currentScore = 0;
@@ -291,34 +624,46 @@ function attachDiffListener(){
 };
 
 
-
+let questions =[];
 /*Function to start the game*/
 function startGame() {
-    if (difficulty === 'easy' && league === 'premier league') {
+    if(league === 'premier league'){
+        if (difficulty === 'easy'){
+            questions = premEasyQs;
+        } else if(difficulty === 'medium'){
+            questions = premMediumQs;
+        }else{
+            alert('Please choose a valid league and difficulty');
+        };
+    }
+
+    if (questions.length > 0){
         mainScreen.innerHTML = `
-            <div class="game-area"><h2>Premier League EFL Cup</h2></div>
-            <div class='quiz'>
-                <h3 id='question'>Insert question here</h3>
-                <div id='answer-buttons'></div>
-                <button id='next-btn' class='btn' style='display: none;'>Next Question</button>
-            </div>
-        `;
-        currentScore = 0;
-        currentQuestionIndex = 0; // Reset question index
-        showQuestion();
-        document.querySelector('#next-btn').addEventListener('click', nextButtonHandle); // Attach event listener after the button is added to the DOM
-    } else {
-        alert('You need to set your difficulty and choose a league');
+                <div class="game-area"><h2>Premier League EFL Cup</h2></div>
+                <div class='quiz'>
+                    <h3 id='question'>Insert question here</h3>
+                    <div id='answer-buttons'></div>
+                    <button id='next-btn' class='btn' style='display: none;'>Next Question</button>
+                </div>
+            `;
+            currentScore = 0;
+            currentQuestionIndex = 0; // Reset question index
+            showQuestion(questions);
+            document.querySelector('#next-btn').addEventListener('click', nextButtonHandle); // Attach event listener after the button is added to the DOM
+    }else{
+        alert('You need to set your difficulty and choose a league')
     }
 }
 
-function showQuestion() {
+
+
+function showQuestion(questions) {
     const questionElement = document.querySelector('#question');
     const answerButtonsElement = document.querySelector('#answer-buttons');
     const nextBtn = document.querySelector('#next-btn');
 
-    if (currentQuestionIndex < premEasyQs.length) {
-        const currentQuestion = premEasyQs[currentQuestionIndex];
+    if (currentQuestionIndex < questions.length) {
+        const currentQuestion = questions[currentQuestionIndex];
         questionElement.textContent = `${currentQuestionIndex + 1}. ${currentQuestion.question}`;
         answerButtonsElement.innerHTML = ''; // Clear previous answers
 
@@ -339,7 +684,7 @@ function showQuestion() {
         console.log("Quiz finished. Score:", currentScore);
         mainScreen.innerHTML = `<div class="game-area"><h2>Quiz Complete</h2></div>
         <div class='quiz'>
-            <h3 id='question'>Congratulations, you scored ${currentScore} out of 5!</h3>
+            <h3 id='question'>Congratulations, you scored ${currentScore} out of ${questions.length}!</h3>
             
             <button id='home-btn' class='btn' style='display: block;'>Return Home</button>
         </div>`
@@ -351,7 +696,7 @@ function showQuestion() {
 
 
 
-function selectAnswer(e) {
+function selectAnswer(e, questions) {
     const selectedButton = e.target;
     const correct = selectedButton.dataset.correct === 'true';
     const answerButtonsElement = document.querySelector('#answer-buttons');
@@ -376,5 +721,5 @@ function selectAnswer(e) {
 
 function nextButtonHandle() {
     currentQuestionIndex++;
-    showQuestion(); // Call showQuestion to update the quiz for the next question
+    showQuestion(questions); // Call showQuestion to update the quiz for the next question
 }
