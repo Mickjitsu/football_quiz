@@ -790,12 +790,15 @@ function attachEventListeners(){
 
 function leagueChoice(){
     mainScreen.innerHTML = `<div class="start-menu leagues" id="premier-league">
+    <img src='assets/images/prem_logo.png' alt='premier league logo'>
     <p>Premier League</p>
     </div>
     <div class="start-menu leagues" id="scottish-league">
+    <img src='assets/images/scot_prem.png' alt='premier league logo'>
     <p>Scottish League</p>
     </div>
     <div class="start-menu leagues" id="la-liga">
+    <img src='assets/images/Laliga.png' alt='premier league logo'>
     <p>La Liga</p>
     </div>`
     attachLeagueListener()

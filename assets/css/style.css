@@ -83,7 +83,10 @@ body{
     border: none;
     background: none;
   }
-
+  .leagues > img{
+    width: 160px;
+    height: 85px;
+  }
 
   /*game area styling*/
   #answer-buttons{
@@ -133,5 +136,9 @@ body{
   #answer-buttons{
     display:flex;
     justify-content: center;
+  };
+  .leagues > img{
+    max-width: 80px;
+    max-height: 45px;
   };
 }
