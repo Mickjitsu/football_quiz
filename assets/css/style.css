@@ -109,7 +109,11 @@ body{
     border-radius: 5px;
     transition: background-color 0.3s, color 0.3s;
     height: 2rem;
-    width: 200px;
+    width: 80%;
+    height: 40px;
+    border:none;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   }
 
   .correct{
@@ -129,6 +133,11 @@ body{
   }
   #next-btn{
     align-self: flex-end;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    height: 2rem;
   }
 @media screen and (min-width: 920px){
     .main-screen{
