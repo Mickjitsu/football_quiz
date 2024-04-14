@@ -922,13 +922,12 @@ function startGame() {
     }
     if (questions.length > 0){
         mainScreen.innerHTML = `
-                <div class="game-area"><h2>Premier League EFL Cup</h2></div>
+                <div class="game-area"><h2>Premier League EFL Cup</h2>
                 <div class='quiz'>
                     <h3 id='question'>Insert question here</h3>
                     <div id='answer-buttons'></div>
-                    
                     <button id='next-btn' class='btn' style='display: none;'>Next Question</button>
-                    
+                </div>
                 </div>
             `;
             currentScore = 0;

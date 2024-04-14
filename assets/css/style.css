@@ -100,6 +100,8 @@ body{
     display:flex;
     flex-direction: column;
     margin: 5px;
+    align-items:flex-start;
+    width: 100%;
   }
   .btn{
     margin: 5px;
@@ -119,16 +121,14 @@ body{
   }
   
   .quiz{
-    align-items: center;
+    display:flex;
+    flex-direction: column;
     text-align: center;
     width: 80%;
     padding: 10px;
   }
-  #answer-buttons{
-    align-items:start;
-  }
   #next-btn{
-    justify-content: center;
+    align-self: flex-end;
   }
 @media screen and (min-width: 920px){
     .main-screen{
