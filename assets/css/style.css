@@ -16,7 +16,7 @@ body{
 .main-screen{
     margin-left:auto;
     margin-right: auto;
-    margin-top: 60px;
+    margin-top: 20px;
     width: 80%;
     height: 500px;
     border:3px solid green;
@@ -48,14 +48,14 @@ body{
 .start-menu{
     border: 1px solid black;
     width: 80%;
-    margin-top: 5px;
+    margin-top:5px;
     cursor: pointer;
     border-radius: 5px;
     transition: background-color 0.3s, color 0.3s;
 }
 .start-menu:hover{
-    background-color: green;
-    color: #ffffff;
+    background-color: white;
+    color: black;
 }
 
 .tutorial {
@@ -88,6 +88,13 @@ body{
     height: 85px;
   }
 
+ .star-gold{
+  color: gold;
+  text-shadow: -1px -1px 0 #000,  
+               1px -1px 0 #000,
+               -1px 1px 0 #000,
+               1px 1px 0 #000; 
+ }
   /*game area styling*/
   #answer-buttons{
     display:flex;

@@ -831,13 +831,16 @@ function attachLeagueListener(){
 
 function diffChoice(){
     mainScreen.innerHTML = `<div class="start-menu difficulty" id="easy">
-    <p>The League Cup</p>
+    <p>Beginner</p>
+    <i class="fa-solid fa-star fa-2x star-gold"></i>
     </div>
     <div class="start-menu difficulty" id="medium">
-    <p>The league</p>
+    <p>World Class</p>
+    <i class="fa-solid fa-star fa-2x star-gold"></i><i class="fa-solid fa-star fa-2x star-gold"></i><i class="fa-solid fa-star fa-2x star-gold"></i>
     </div>
     <div class="start-menu difficulty" id="hard">
-    <p>The treble</p>
+    <p>Ultimate</p>
+    <i class="fa-solid fa-star fa-2x star-gold"></i><i class="fa-solid fa-star fa-2x star-gold"></i><i class="fa-solid fa-star fa-2x star-gold"></i><i class="fa-solid fa-star fa-2x star-gold"></i><i class="fa-solid fa-star fa-2x star-gold"></i>
     </div>`
     attachDiffListener();
 };
