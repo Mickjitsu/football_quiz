@@ -752,7 +752,7 @@ function gameOpener2(){
     <div class="start-menu" id="rules">
         <p>Tutorial</p>
     </div>`
-    console.log('game opener 2 called')
+
     attachEventListeners();
 }
 }
@@ -788,20 +788,8 @@ function attachEventListeners(){
 
 };
 
-
-function returnHome(){
-    let backArrows = document.querySelectorAll('.back-arrow');
-    for (let i = 0; i < backArrows.length; i++){
-        backArrows[i].addEventListener('click', gameOpener2);
-    };
-};
-
 function leagueChoice(){
-    mainScreen.innerHTML = `
-    <div class='back-arrow'>
-    <i class="fa-solid fa-arrow-left"></i>
-    </div>
-    <div class="start-menu leagues" id="premier-league">
+    mainScreen.innerHTML = `<div class="start-menu leagues" id="premier-league">
     <img src='assets/images/prem_logo.png' alt='premier league logo'>
     <p>Premier League</p>
     </div>
@@ -813,9 +801,8 @@ function leagueChoice(){
     <img src='assets/images/Laliga.png' alt='premier league logo'>
     <p>La Liga</p>
     </div>`
-    attachLeagueListener();
-    returnHome();
-};
+    attachLeagueListener()
+}
 
 
 
@@ -838,16 +825,19 @@ function attachLeagueListener(){
     });
 };
 
+function returnHome(){
+    let backArrows = document.querySelectorAll('.back-arrow');
+    for (let i = 0; i < backArrows.length; i++){
+        backArrows[i].addEventListener('click', gameOpener2);
+    };
+};
 
 
 /*this determines and logs the users difficulty choice*/
 
 function diffChoice(){
     mainScreen.innerHTML = 
-    `<div class='back-arrow'>
-    <i class="fa-solid fa-arrow-left"></i>
-    </div>
-    <div class="start-menu difficulty" id="easy">
+    `<div class="start-menu difficulty" id="easy">
     <p>Beginner</p>
     <i class="fa-solid fa-star fa-2x star-gold"></i>
     </div>
@@ -859,7 +849,9 @@ function diffChoice(){
     <p>Ultimate</p>
     <i class="fa-solid fa-star fa-2x star-gold"></i><i class="fa-solid fa-star fa-2x star-gold"></i><i class="fa-solid fa-star fa-2x star-gold"></i><i class="fa-solid fa-star fa-2x star-gold"></i><i class="fa-solid fa-star fa-2x star-gold"></i>
     </div>
-    `
+    <div class='back-arrow'>
+    <i class="fa-solid fa-arrow-left"></i>
+    </div>`
     attachDiffListener();
     returnHome();
 };
@@ -868,6 +860,25 @@ function attachDiffListener(){
     document.querySelector('#easy').addEventListener('click', setDifficulty);
     document.querySelector('#medium').addEventListener('click', setDifficulty);
     document.querySelector('#hard').addEventListener('click', setDifficulty);
+    /*
+    document.querySelector('#easy').addEventListener('click', function(event){
+        difficulty = 'easy';
+        console.log('Difficulty is set to easy');
+        console.log(event)
+        gameOpener2()
+    });
+    
+    document.querySelector('#medium').addEventListener('click', function(){
+        difficulty = 'medium';
+        console.log('Difficulty is set to medium')
+        gameOpener2()
+    });
+    document.querySelector('#hard').addEventListener('click', function(){
+        difficulty = 'hard';
+        console.log('Difficulty is set to hard')
+        gameOpener2()
+    })
+    */
 };
 
 function setDifficulty(event){
@@ -935,7 +946,7 @@ function startGame() {
     }
     if (questions.length > 0){
         mainScreen.innerHTML = `
-                <div class="game-area"><h2>Big fat football quiz, ${league} ${difficulty} edition!</h2>
+                <div class="game-area"><h2>Premier League EFL Cup</h2>
                 <div class='quiz'>
                     <h3 id='question'>Insert question here</h3>
                     <div id='answer-buttons'></div>
@@ -950,7 +961,7 @@ function startGame() {
     }else{
         alert('You need to set your difficulty and choose a league')
     }
-};
+}
 
 
 
