@@ -57,7 +57,18 @@ body{
     background-color: white;
     color: black;
 }
-
+.back-arrow{
+  margin-left: 5px;
+  margin-right: auto;
+  height: 50px;
+  width: 50px;
+  font-size: 30px;
+  cursor: pointer;
+};
+.back-arrow:hover{
+    background-color: white;
+    color: black;
+};
 .tutorial {
     position: absolute;
     top: 50%;
