@@ -846,11 +846,17 @@ function diffChoice(){
 };
 
 function attachDiffListener(){
-    document.querySelector('#easy').addEventListener('click', function(){
+    document.querySelector('#easy').addEventListener('click', setDifficulty);
+    document.querySelector('#medium').addEventListener('click', setDifficulty);
+    document.querySelector('#hard').addEventListener('click', setDifficulty);
+    /*
+    document.querySelector('#easy').addEventListener('click', function(event){
         difficulty = 'easy';
-        console.log('Difficulty is set to easy')
+        console.log('Difficulty is set to easy');
+        console.log(event)
         gameOpener2()
     });
+    
     document.querySelector('#medium').addEventListener('click', function(){
         difficulty = 'medium';
         console.log('Difficulty is set to medium')
@@ -861,7 +867,14 @@ function attachDiffListener(){
         console.log('Difficulty is set to hard')
         gameOpener2()
     })
+    */
 };
+
+function setDifficulty(event){
+    difficulty = event.target.id;
+    console.log(difficulty);
+    gameOpener2();
+}
 /*https://www.javatpoint.com/how-to-shuffle-an-array-in-javascript how to shuffle array*/
 function shuffle(array) {  
     for (let i = array.length - 1; i> 0; i--) {  

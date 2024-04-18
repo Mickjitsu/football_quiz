@@ -139,6 +139,10 @@ body{
     transition: background-color 0.3s, color 0.3s;
     height: 2rem;
   }
+
+  .difficulty > *{
+    pointer-events: none;
+  }
 @media screen and (min-width: 920px){
     .main-screen{
         width: 700px;
