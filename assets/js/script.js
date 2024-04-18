@@ -716,7 +716,7 @@ let currentScore = 0;
 let difficulty; // Define difficulty
 let league; // Define league
 
-var mainScreen = document.querySelector('.main-screen');
+let mainScreen = document.querySelector('.main-screen');
 
 function gameOpener() {
     setTimeout(function() {
