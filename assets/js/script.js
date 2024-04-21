@@ -900,7 +900,35 @@ let questions =[];
 
 /*Function to start the game*/
 function startGame() {
-    let noChoice = document.querySelector('.no-choice')
+    let noChoice = document.querySelector('.no-choice');
+    let noDifficulty = document.querySelector('.no-difficulty')
+    let noLeague = document.querySelector('.no-league');
+    console.log("League:", league);
+    console.log("Difficulty:", difficulty);
+
+    // Check if difficulty is chosen but league is not
+    if (difficulty && !league) {
+        console.log("Difficulty chosen without league");
+        noLeague.classList.remove('hidden');
+        attachCloseEventListener();
+        return;
+    }
+    // Check if both league and difficulty are not chosen
+    if (!league) {
+        console.log("No league chosen");
+        noChoice.classList.remove('hidden');
+        attachCloseEventListener();
+        return;
+    }
+    // Check if league is chosen but difficulty is not
+    if (!difficulty) {
+        console.log("No difficulty chosen");
+        noDifficulty.classList.remove('hidden');
+        attachCloseEventListener();
+        return;
+    }
+
+
     if(league === 'premier league'){
         if (difficulty === 'easy'){
             questions = premEasyQs;
@@ -910,7 +938,7 @@ function startGame() {
             questions = premHardQs;
         }
         else{
-            alert('Please choose a valid league and difficulty');
+            return;
         };
     };
     if(league === 'scottish league'){
@@ -922,7 +950,7 @@ function startGame() {
             questions = scotHardQs;
         }
         else{
-            alert('Please choose a valid league and difficulty');
+            return;
         };
     };
     if(league === 'la liga'){
@@ -934,8 +962,7 @@ function startGame() {
             questions = laLigaHardQs;
         }
         else{
-            noChoice.classList.remove('.hidden');
-            attachEventListeners();
+            return;
         };
     }
 
