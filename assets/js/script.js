@@ -800,8 +800,12 @@ function leagueChoice(){
     <div class="start-menu leagues" id="la-liga">
     <img src='assets/images/Laliga.png' alt='premier league logo'>
     <p>La Liga</p>
+    </div>
+    <div class='back-arrow'>
+    <i class="fa-solid fa-arrow-left"></i>
     </div>`
-    attachLeagueListener()
+    attachLeagueListener();
+    returnHome();
 }
 
 
@@ -849,7 +853,7 @@ function diffChoice(){
     <p>Beginner</p>
     <i class="fa-solid fa-star fa-2x star-gold"></i>
     </div>
-    <div class="start-menu difficulty" id="medium">
+    <div class="start-menu difficulty" id="intermediate">
     <p>World Class</p>
     <i class="fa-solid fa-star fa-2x star-gold"></i><i class="fa-solid fa-star fa-2x star-gold"></i><i class="fa-solid fa-star fa-2x star-gold"></i>
     </div>
@@ -866,7 +870,7 @@ function diffChoice(){
 
 function attachDiffListener(){
     document.querySelector('#easy').addEventListener('click', setDifficulty);
-    document.querySelector('#medium').addEventListener('click', setDifficulty);
+    document.querySelector('#intermediate').addEventListener('click', setDifficulty);
     document.querySelector('#hard').addEventListener('click', setDifficulty);
 };
 
@@ -879,7 +883,7 @@ function setDifficulty(event){
 };
 
 function diffUpper(difficulty){
-    diffResult = difficulty.charAt(0).toUpperCase() + difficulty.slice(1);
+    diffResult = difficulty
     console.log(diffResult);
 };
 /*https://www.javatpoint.com/how-to-shuffle-an-array-in-javascript how to shuffle array*/
@@ -907,7 +911,7 @@ function startGame() {
     if(league === 'premier league'){
         if (difficulty === 'easy'){
             questions = premEasyQs;
-        } else if(difficulty === 'medium'){
+        } else if(difficulty === 'intermediate'){
             questions = premMediumQs;
         }else if(difficulty === 'hard'){
             questions = premHardQs;
@@ -919,7 +923,7 @@ function startGame() {
     if(league === 'scottish league'){
         if (difficulty === 'easy'){
             questions = scotEasyQs;
-        } else if(difficulty === 'medium'){
+        } else if(difficulty === 'intermediate'){
             questions = scotMediumQs;
         }else if(difficulty === 'hard'){
             questions = scotHardQs;
@@ -931,7 +935,7 @@ function startGame() {
     if(league === 'la liga'){
         if (difficulty === 'easy'){
             questions = laLigaEasyQs;
-        } else if(difficulty === 'medium'){
+        } else if(difficulty === 'intermediate'){
             questions = laLigaMediumQs;
         }else if(difficulty === 'hard'){
             questions = laLigaHardQs;
@@ -945,7 +949,10 @@ function startGame() {
     console.log(leagueHead);
     if (questions.length > 0){
         mainScreen.innerHTML = `
-                <div class="game-area"><h2>${leagueResult} ${diffResult} difficulty edition</h2>
+                <div class='back-arrow'>
+                    <i class="fa-solid fa-arrow-left"></i>
+                </div>
+                <div class="game-area"><h2>${leagueResult} ${diffResult}edition</h2>
                 <div class='quiz'>
                     <h3 id='question'>Insert question here</h3>
                     <div id='answer-buttons'></div>
@@ -957,6 +964,7 @@ function startGame() {
             currentQuestionIndex = 0; // Reset question index
             showQuestion(questions);
             document.querySelector('#next-btn').addEventListener('click', nextButtonHandle); // Attach event listener after the button is added to the DOM
+            returnHome();
     }else{
         alert('You need to set your difficulty and choose a league')
     }
