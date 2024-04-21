@@ -734,6 +734,7 @@ function gameOpener() {
             attachEventListeners();
         }
     }, 3000);
+    attachCloseEventListener();
 }
 
 /*this allows users to be able to return to the main screen without a 3 second delay*/
@@ -754,6 +755,7 @@ function gameOpener2(){
     </div>`
 
     attachEventListeners();
+    attachCloseEventListener();
 }
 }
 

@@ -102,13 +102,6 @@ body{
     color: black;
 };
 
-.star-gold{
-color: gold;
-text-shadow: -1px -1px 0 #000,  
-             1px -1px 0 #000,
-             -1px 1px 0 #000,
-             1px 1px 0 #000; 
-}
 /*game area styling*/
 #answer-buttons{
   display:flex;
@@ -155,7 +148,9 @@ text-shadow: -1px -1px 0 #000,
   transition: background-color 0.3s, color 0.3s;
   height: 2rem;
 }
-
+.start-menu > i{
+  padding-bottom: 10px;
+}
 .difficulty > *{
   pointer-events: none;
 }
