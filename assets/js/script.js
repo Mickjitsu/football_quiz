@@ -762,31 +762,24 @@ function attachEventListeners(){
     const difficultyDiv = document.querySelector('#difficulty');
     const leagueDiv = document.querySelector('#league');
     const rulesDiv = document.querySelector('#rules');
-    const close = document.querySelector('.close')
-    const tutorial = document.querySelector('.tutorial')
+    const tutorial = document.querySelector('.tutorial');
 
-    
     if(startDiv){
-        startDiv.addEventListener('click', startGame)
-    };
+        startDiv.addEventListener('click', startGame);
+    }
     if(difficultyDiv){
-        difficultyDiv.addEventListener('click', diffChoice)
+        difficultyDiv.addEventListener('click', diffChoice);
     }
     if(leagueDiv){
-        leagueDiv.addEventListener('click', leagueChoice)
-    };
+        leagueDiv.addEventListener('click', leagueChoice);
+    }
     if (rulesDiv){
         rulesDiv.addEventListener('click', function(){
             tutorial.classList.remove('hidden');
-        })
+        });
     }
-    if(close){
-        close.addEventListener('click', function(){
-            tutorial.classList.add('hidden');
-        })
-    }
-
 };
+
 
 function leagueChoice(){
     mainScreen.innerHTML = `<div class="start-menu leagues" id="premier-league">
@@ -907,7 +900,7 @@ let questions =[];
 
 /*Function to start the game*/
 function startGame() {
-    
+    let noChoice = document.querySelector('.no-choice')
     if(league === 'premier league'){
         if (difficulty === 'easy'){
             questions = premEasyQs;
@@ -941,18 +934,17 @@ function startGame() {
             questions = laLigaHardQs;
         }
         else{
-            alert('Please choose a valid league and difficulty');
+            noChoice.classList.remove('.hidden');
+            attachEventListeners();
         };
     }
 
-    let leagueHead = league.toUpperCase();
-    console.log(leagueHead);
     if (questions.length > 0){
         mainScreen.innerHTML = `
                 <div class='back-arrow'>
                     <i class="fa-solid fa-arrow-left"></i>
                 </div>
-                <h2>${leagueResult} ${diffResult}edition</h2>
+                <h2>${leagueResult} ${diffResult} edition</h2>
                 <div class='quiz'>
                     <h3 id='question'>Insert question here</h3>
                     <div id='answer-buttons'></div>
@@ -965,8 +957,19 @@ function startGame() {
             document.querySelector('#next-btn').addEventListener('click', nextButtonHandle); // Attach event listener after the button is added to the DOM
             returnHome();
     }else{
-        alert('You need to set your difficulty and choose a league')
+        noChoice.classList.remove('hidden');
+        attachCloseEventListener(); 
     }
+};
+
+function attachCloseEventListener() {
+    const closeButtons = document.querySelectorAll('.close');
+    closeButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const modal = button.parentElement.parentElement;
+            modal.classList.add('hidden');
+        });
+    });
 }
 
 

@@ -58,7 +58,7 @@ body{
   color: black;
 }
 
-.tutorial {
+.tutorial, .no-choice{
   position: absolute;
   top: 50%;
   left: 50%;
@@ -84,8 +84,9 @@ body{
   background: none;
 }
 .leagues > img{
-  width: 160px;
-  height: 85px;
+  width: 130px;
+  height: 67px;
+  padding-top:5px;
 }
 
 .back-arrow{
