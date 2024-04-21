@@ -17,7 +17,7 @@ body{
   margin: 20px auto;
   width: 80%;
   height: 80%;
-  border:3px solid green;
+  border:3px solid #9ACD32;
   background-color: rgb(251,243,213,0.7);
   border-radius: 4px;
   display:flex;
@@ -50,6 +50,8 @@ body{
   transition: background-color 0.3s, color 0.3s;
   margin-top: 5%;
   margin-bottom: 5%;
+  background-color: #FFD700; 
+  color: #000; 
 }
 .start-menu:hover{
   background-color: white;
@@ -125,14 +127,16 @@ text-shadow: -1px -1px 0 #000,
   border:none;
   border-radius: 6px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  background-color: #FFD700;
+  color: #000; 
 }
 
 .correct{
-  background-color: green;
+  background-color: #008000; 
 }
 
 .incorrect{
-  background-color: red;
+  background-color: #FF0000;
 }
 
 .quiz{
