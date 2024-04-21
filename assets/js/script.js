@@ -807,24 +807,32 @@ function leagueChoice(){
 
 
 /*these functions do not have placeholder text. This will determine the league choice by the user*/
+let leagueResult = '';
 function attachLeagueListener(){
     document.querySelector('#premier-league').addEventListener('click', function(){
         league = 'premier league';
-        console.log('The league is set to the Premier League')
-        gameOpener2()
+        console.log('The league is set to the Premier League');
+        gameOpener2();
+        leagueUpper(league);
     });
     document.querySelector('#scottish-league').addEventListener('click', function(){
         league = 'scottish league';
         console.log('The league is set to the scottish premiership')
-        gameOpener2()
+        gameOpener2();
+        leagueUpper(league);
     });
     document.querySelector('#la-liga').addEventListener('click', function(){
         league = 'la liga';
         console.log('The league is set to the Spanish La Liga')
-        gameOpener2()
+        gameOpener2();
+        leagueUpper(league);
     });
 };
 
+function leagueUpper(league){
+    leagueResult = league.charAt(0).toUpperCase() + league.slice(1);
+    console.log(leagueResult);
+};
 function returnHome(){
     let backArrows = document.querySelectorAll('.back-arrow');
     for (let i = 0; i < backArrows.length; i++){
@@ -860,32 +868,20 @@ function attachDiffListener(){
     document.querySelector('#easy').addEventListener('click', setDifficulty);
     document.querySelector('#medium').addEventListener('click', setDifficulty);
     document.querySelector('#hard').addEventListener('click', setDifficulty);
-    /*
-    document.querySelector('#easy').addEventListener('click', function(event){
-        difficulty = 'easy';
-        console.log('Difficulty is set to easy');
-        console.log(event)
-        gameOpener2()
-    });
-    
-    document.querySelector('#medium').addEventListener('click', function(){
-        difficulty = 'medium';
-        console.log('Difficulty is set to medium')
-        gameOpener2()
-    });
-    document.querySelector('#hard').addEventListener('click', function(){
-        difficulty = 'hard';
-        console.log('Difficulty is set to hard')
-        gameOpener2()
-    })
-    */
 };
 
+let diffResult = ''
 function setDifficulty(event){
     difficulty = event.target.id;
     console.log(difficulty);
     gameOpener2();
-}
+    diffUpper(difficulty);
+};
+
+function diffUpper(difficulty){
+    diffResult = difficulty.charAt(0).toUpperCase() + difficulty.slice(1);
+    console.log(diffResult);
+};
 /*https://www.javatpoint.com/how-to-shuffle-an-array-in-javascript how to shuffle array*/
 function shuffle(array) {  
     for (let i = array.length - 1; i> 0; i--) {  
@@ -944,9 +940,12 @@ function startGame() {
             alert('Please choose a valid league and difficulty');
         };
     }
+
+    let leagueHead = league.toUpperCase();
+    console.log(leagueHead);
     if (questions.length > 0){
         mainScreen.innerHTML = `
-                <div class="game-area"><h2>Premier League EFL Cup</h2>
+                <div class="game-area"><h2>${leagueResult} ${diffResult} difficulty edition</h2>
                 <div class='quiz'>
                     <h3 id='question'>Insert question here</h3>
                     <div id='answer-buttons'></div>
