@@ -49,9 +49,12 @@ body{
   border-radius: 5px;
   transition: background-color 0.3s, color 0.3s;
   margin-top: 5%;
-  margin-bottom: 5%;
+  margin-bottom: 10px;
   background-color: #FFD700; 
   color: #000; 
+}
+#rules{
+  margin-bottom: 5%;
 }
 .start-menu:hover{
   background-color: white;
