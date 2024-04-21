@@ -952,12 +952,11 @@ function startGame() {
                 <div class='back-arrow'>
                     <i class="fa-solid fa-arrow-left"></i>
                 </div>
-                <div class="game-area"><h2>${leagueResult} ${diffResult}edition</h2>
+                <h2>${leagueResult} ${diffResult}edition</h2>
                 <div class='quiz'>
                     <h3 id='question'>Insert question here</h3>
                     <div id='answer-buttons'></div>
                     <button id='next-btn' style='display: none;'>Next Question</button>
-                </div>
                 </div>
             `;
             currentScore = 0;
