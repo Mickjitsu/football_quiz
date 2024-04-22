@@ -1033,7 +1033,7 @@ function showQuestion(questions) {
     } else {
         // Handle quiz end
         console.log("Quiz finished. Score:", currentScore);
-        if(currentScore > (questions.length -1) && league === 'premier league'){
+        if(currentScore > (questions.length - 1) && league === 'premier league'){
             mainScreen.innerHTML = `<div class="game-area"><h2>Quiz Complete</h2></div>
         <div class='quiz'>
             <h3 id='question'>Congratulation! You scored ${currentScore} out of ${questions.length}!</h3>
@@ -1046,7 +1046,7 @@ function showQuestion(questions) {
         homeBtn.addEventListener('click', gameOpener2);
         gameCompleted = true;
         }
-        else if(currentScore > (questions.length -1) && league === 'la liga'){
+        else if(currentScore > (questions.length - 1) && league === 'la liga'){
             mainScreen.innerHTML = `<div class="game-area"><h2>Quiz Complete</h2></div>
         <div class='quiz'>
             <h3 id='question'>Congratulation! You scored ${currentScore} out of ${questions.length}!</h3>
@@ -1059,7 +1059,7 @@ function showQuestion(questions) {
         homeBtn.addEventListener('click', gameOpener2);
         gameCompleted = true;
         }
-        else if(currentScore > (questions.length -1) && league === 'scottish league'){
+        else if(currentScore > (questions.length - 1) && league === 'scottish league'){
             mainScreen.innerHTML = `<div class="game-area"><h2>Quiz Complete</h2></div>
         <div class='quiz'>
             <h3 id='question'>Congratulation! You scored ${currentScore} out of ${questions.length}!</h3>
