@@ -1030,9 +1030,10 @@ function showQuestion(questions) {
         console.log("Quiz finished. Score:", currentScore);
         mainScreen.innerHTML = `<div class="game-area"><h2>Quiz Complete</h2></div>
         <div class='quiz'>
-            <h3 id='question'>Congratulations, you scored ${currentScore} out of ${questions.length}!</h3>
-            
+            <h3 id='question'>You scored ${currentScore} out of ${questions.length}!</h3>
+            <div class='home-button'>
             <button id='home-btn' class='btn' style='display: block;'>Return Home</button>
+            </div>
         </div>`
         const homeBtn = document.querySelector('#home-btn');
         homeBtn.addEventListener('click', gameOpener2);
