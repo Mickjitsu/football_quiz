@@ -168,6 +168,9 @@ body{
   width: 50%; 
   margin: 0 auto; 
 }
+.home-button > img{
+  margin-bottom: 10px;
+}
 @media screen and (min-width: 920px){
   .main-screen{
       width: 700px;

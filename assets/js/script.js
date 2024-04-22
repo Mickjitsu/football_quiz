@@ -1028,6 +1028,40 @@ function showQuestion(questions) {
     } else {
         // Handle quiz end
         console.log("Quiz finished. Score:", currentScore);
+        if(currentScore > (questions.length -1) && league === 'premier league'){
+            mainScreen.innerHTML = `<div class="game-area"><h2>Quiz Complete</h2></div>
+        <div class='quiz'>
+            <h3 id='question'>Congratulation! You scored ${currentScore} out of ${questions.length}!</h3>
+            <div class='home-button'>
+            <img src=assets/images/Premier_league_trophy_icon.png alt='Premier league trophy icon'>
+            <button id='home-btn' class='btn' style='display: block;'>Return Home</button>
+            </div>
+        </div>`
+        const homeBtn = document.querySelector('#home-btn');
+        homeBtn.addEventListener('click', gameOpener2);
+        }
+        else if(currentScore > (questions.length -1) && league === 'la liga'){
+            mainScreen.innerHTML = `<div class="game-area"><h2>Quiz Complete</h2></div>
+        <div class='quiz'>
+            <h3 id='question'>Congratulation! You scored ${currentScore} out of ${questions.length}!</h3>
+            <div class='home-button'>
+            <img src=assets/images/Liga_trophy.png alt='La Liga trophy icon'>
+            <button id='home-btn' class='btn' style='display: block;'>Return Home</button>
+            </div>
+        </div>`
+        const homeBtn = document.querySelector('#home-btn');
+        homeBtn.addEventListener('click', gameOpener2);
+        }
+        else if(currentScore > (questions.length -1) && league === 'scottish league'){
+            mainScreen.innerHTML = `<div class="game-area"><h2>Quiz Complete</h2></div>
+        <div class='quiz'>
+            <h3 id='question'>Congratulation! You scored ${currentScore} out of ${questions.length}!</h3>
+            <div class='home-button'>
+            <img src=assets/images/Spltrophy.png alt='SPFL trophy icon'>
+            <button id='home-btn' class='btn' style='display: block;'>Return Home</button>
+            </div>`
+        }
+        else{
         mainScreen.innerHTML = `<div class="game-area"><h2>Quiz Complete</h2></div>
         <div class='quiz'>
             <h3 id='question'>You scored ${currentScore} out of ${questions.length}!</h3>
@@ -1037,6 +1071,7 @@ function showQuestion(questions) {
         </div>`
         const homeBtn = document.querySelector('#home-btn');
         homeBtn.addEventListener('click', gameOpener2);
+        }
     }
    
 }
