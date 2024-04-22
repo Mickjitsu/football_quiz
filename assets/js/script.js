@@ -738,6 +738,7 @@ function gameOpener() {
 }
 
 /*this allows users to be able to return to the main screen without a 3 second delay*/
+let gameCompleted = false;
 function gameOpener2(){
     if(mainScreen){mainScreen.classList.remove('hidden');
 
@@ -753,7 +754,11 @@ function gameOpener2(){
     <div class="start-menu" id="rules">
         <p>Tutorial</p>
     </div>`
-
+    if (gameCompleted){
+        league = null;
+        difficulty = null;
+        gameCompleted = false;
+    }
     attachEventListeners();
     attachCloseEventListener();
 }
@@ -1039,6 +1044,7 @@ function showQuestion(questions) {
         </div>`
         const homeBtn = document.querySelector('#home-btn');
         homeBtn.addEventListener('click', gameOpener2);
+        gameCompleted = true;
         }
         else if(currentScore > (questions.length -1) && league === 'la liga'){
             mainScreen.innerHTML = `<div class="game-area"><h2>Quiz Complete</h2></div>
@@ -1051,6 +1057,7 @@ function showQuestion(questions) {
         </div>`
         const homeBtn = document.querySelector('#home-btn');
         homeBtn.addEventListener('click', gameOpener2);
+        gameCompleted = true;
         }
         else if(currentScore > (questions.length -1) && league === 'scottish league'){
             mainScreen.innerHTML = `<div class="game-area"><h2>Quiz Complete</h2></div>
@@ -1060,6 +1067,9 @@ function showQuestion(questions) {
             <img src=assets/images/Spltrophy.png alt='SPFL trophy icon'>
             <button id='home-btn' class='btn' style='display: block;'>Return Home</button>
             </div>`
+            const homeBtn = document.querySelector('#home-btn');
+            homeBtn.addEventListener('click', gameOpener2);
+            gameCompleted = true;
         }
         else{
         mainScreen.innerHTML = `<div class="game-area"><h2>Quiz Complete</h2></div>
@@ -1071,6 +1081,7 @@ function showQuestion(questions) {
         </div>`
         const homeBtn = document.querySelector('#home-btn');
         homeBtn.addEventListener('click', gameOpener2);
+        gameCompleted = true;
         }
     }
    
