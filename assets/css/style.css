@@ -7,7 +7,7 @@ header{
 }
 body{
   height: 100vh;
-  background-color: rgb(76, 187, 23);
+  background-image: url('../images/football_pitch1200.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
