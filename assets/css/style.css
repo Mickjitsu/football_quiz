@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 header{
   text-align: center;
   color: white;
@@ -6,10 +7,13 @@ header{
 }
 body{
   height: 100vh;
-  background-image: url(/assets/images/football_pitch1200.jpg);
+  background-color: rgb(76, 187, 23);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 
