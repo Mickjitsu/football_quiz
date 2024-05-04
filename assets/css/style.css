@@ -20,7 +20,7 @@ body{
 .main-screen{
   margin: 20px auto;
   width: 80%;
-  height: 60%;
+  height: 550%;
   border:3px solid #9ACD32;
   background-color: rgb(251,243,213,0.7);
   border-radius: 4px;
@@ -28,7 +28,7 @@ body{
   flex-direction: column;
   text-align: center;
   align-items: center;
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 .hidden{
   display:none
@@ -56,8 +56,8 @@ body{
   transition: background-color 0.3s, color 0.3s;
   margin-top: 5%;
   margin-bottom: 10px;
-  background-color: #FFD700; 
-  color: #000; 
+  background-color: #8FB68F;
+  color: #FFFFFF; 
 }
 #rules{
   margin-bottom: 5%;
@@ -101,27 +101,20 @@ body{
 .back-arrow{
   margin-left: 5px;
   margin-right: auto;
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
   font-size: 30px;
   cursor: pointer;
-};
+}
 .back-arrow:hover{
-    background-color: white;
     color: black;
-    height: 70px;
-    width: 70px;
-};
+    font-size: 40px
+}
 
 /*game area styling*/
 #answer-buttons{
   display:flex;
   flex-direction: column;
-  margin: 5px;
-  align-items:flex-start;
-  width: 100%;
-  font-size: 1.3rem;
-  height: 3rem;
 }
 .btn{
   margin: 5px;
@@ -134,11 +127,15 @@ body{
   border:none;
   border-radius: 6px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  background-color: #FFD700;
-  color: #000; 
-  font-size: 1.3rem;
+  background-color: #8FB68F;
+  color: #FFFFFF; 
+  font-size: 0.8rem;
 }
-
+.btn:hover{
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
 .correct{
   background-color: #008000; 
 }
@@ -147,12 +144,14 @@ body{
   background-color: #FF0000;
 }
 
+
 .quiz{
   display:flex;
   flex-direction: column;
   text-align: center;
   width: 100%;
   padding: 10px;
+  height: 50%;
 }
 #next-btn{
   align-self: flex-end;
@@ -168,12 +167,12 @@ body{
 }
 .difficulty > *{
   pointer-events: none;
-};
+}
 .home-button {
   display: flex;
   justify-content: center; 
   align-items: center; 
-  height: 100vh; 
+  flex-direction: column;
 }
 
 .home-button > button {
@@ -190,19 +189,34 @@ body{
   .main-screen{
       width: 700px;
   }
-};
+}
+.main-screen{
+  font-size: 1.2rem;
+}
+.btn{
+  font-size:1.2rem;
+}
+#next-btn{
+  font-size:1.2rem;
+}
 
-@media screen and (max-width: 360px){
+
+@media screen and (max-width: 380px){
   .quiz{
       width: 80%;
-  }
-  #answer-buttons{
-      display:flex;
-      justify-content: center;
   }
   .leagues > img{
       max-width: 80px;
       max-height: 45px;
+  }
+  .main-screen{
+    font-size: 0.8rem;
+  }
+  .btn{
+    font-size:0.8rem;
+  }
+  #next-btn{
+    font-size:0.8rem;
   }
 };
 
