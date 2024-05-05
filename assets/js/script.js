@@ -1107,11 +1107,15 @@ function selectAnswer(e, questions) {
 
     Array.from(answerButtonsElement.children).forEach(button => {
         button.disabled = true;
+        button.classList.remove('btn-hover');
+        if(button !== selectedButton){
+            button.classList.add('btn-disabled');
+        }
         if (button.dataset.correct === 'true') {
             button.classList.add('correct');
         }
     });
-
+    selectedButton.classList.add('selected');
     nextBtn.style.display = 'block'; // Show the next button
 }
 

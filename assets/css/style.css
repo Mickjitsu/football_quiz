@@ -2,8 +2,15 @@
 header{
   text-align: center;
   color: white;
-  height: 10vh;
-  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2.5%;
+}
+.header-heading{
+  width: 40%;
+  background-color: rgb(89, 135, 102, 0.7);
+  border:3px solid #8FB68F;
+  box-shadow: 0 4px 8px #598766;
 }
 body{
   height: 100vh;
@@ -15,13 +22,12 @@ body{
   font-weight: 400;
   font-style: normal;
 }
-
-
 .main-screen{
   margin: 20px auto;
   width: 80%;
-  height: 550%;
-  border:3px solid #9ACD32;
+  height: 100%;
+  border:3px solid #598766;
+  box-shadow: 0 4px 8px #598766;
   background-color: rgb(251,243,213,0.7);
   border-radius: 4px;
   display:flex;
@@ -42,14 +48,16 @@ body{
   text-align: center;
   margin-left: auto;
   margin-right:auto;
-  border: 2px solid green;
+  border: 2px solid #598766;
+  box-shadow: 0 4px 8px #598766;
   font-size: 25px;
   padding: 5%;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 .start-menu{
-  border: 1px solid black;
+  border: 1px solid #598766;
+  box-shadow: 0 4px 8px #598766;
   width: 80%;
   cursor: pointer;
   border-radius: 5px;
@@ -67,20 +75,21 @@ body{
   color: black;
 }
 
-.tutorial, .no-choice, .no-difficulty, .no-league{
+.modal-content{
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 70%;
+  width: 50%;
   background-color: rgb(251,243,213);
-  padding: 5px;
-  height: 200px;
+  padding: 10px;
+  height: 300px;
   border-radius: 5px;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
   z-index: 10;
   text-align: center;
   padding: 20px;
+  font-size: 1rem;
 }
 .close {
   position: absolute;
@@ -123,18 +132,18 @@ body{
   transition: background-color 0.3s, color 0.3s;
   height: 2rem;
   width: 80%;
-  height: 40px;
   border:none;
   border-radius: 6px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px #598766;
   background-color: #8FB68F;
   color: #FFFFFF; 
   font-size: 0.8rem;
 }
 .btn:hover{
-  background-color: white;
-  color: black;
+  color: #FFFFFF;
   cursor: pointer;
+  height: 2.2rem;
+  width: 84%;
 }
 .correct{
   background-color: #008000; 
@@ -143,8 +152,13 @@ body{
 .incorrect{
   background-color: #FF0000;
 }
-
-
+.btn-disabled {
+  pointer-events: none; 
+  opacity: 0.5; 
+}
+.selected {
+  pointer-events: none; 
+}
 .quiz{
   display:flex;
   flex-direction: column;
@@ -161,6 +175,13 @@ body{
   transition: background-color 0.3s, color 0.3s;
   height: 2rem;
   font-size: 1.2rem;
+  background-color:  #598766;
+  color: #FFFFFF;
+  margin-right: 5px;
+}
+#next-btn:hover{
+  height: 2.3rem;
+  font-size:1.3rem;
 }
 .start-menu > i{
   padding-bottom: 10px;
@@ -186,7 +207,13 @@ body{
 }
 
 @media screen and (min-width: 920px){
-  .main-screen{
+.modal-content{
+    font-size: 1.5rem
+  }
+.welcome{
+    font-size: 2rem;
+  }
+.main-screen{
       width: 700px;
   }
 }
@@ -194,7 +221,7 @@ body{
   font-size: 1.2rem;
 }
 .btn{
-  font-size:1.2rem;
+  font-size:1rem;
 }
 #next-btn{
   font-size:1.2rem;
@@ -219,6 +246,8 @@ body{
     font-size:0.8rem;
   }
 };
+
+
 
 @media screen and (max-height: 480px){
   .main-screen, .welcome{height: 50%;
