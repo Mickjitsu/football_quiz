@@ -216,7 +216,6 @@ body{
 .main-screen{
       width: 700px;
   }
-}
 .main-screen{
   font-size: 1.2rem;
 }
@@ -226,7 +225,7 @@ body{
 #next-btn{
   font-size:1.2rem;
 }
-
+}
 
 @media screen and (max-width: 380px){
   .quiz{
@@ -245,11 +244,14 @@ body{
   #next-btn{
     font-size:0.8rem;
   }
-};
+}
 
-
-
+@media screen and (max-width: 620px){
+.header-heading > h1{
+  font-size: 1.3rem;
+}
+}
 @media screen and (max-height: 480px){
   .main-screen, .welcome{height: 50%;
   }
-};
+}
