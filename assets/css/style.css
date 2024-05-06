@@ -43,13 +43,14 @@ body{
 .welcome{
   width: 60%;
   height:300px;
-  background-color:rgb(251,243,213,0.7);
+  background-color: rgb(89, 135, 102, 0.7);
+  border:3px solid #8FB68F;
+  box-shadow: 0 4px 8px #598766;
+  color: #ffffff;
   border-radius: 4px;
   text-align: center;
   margin-left: auto;
   margin-right:auto;
-  border: 2px solid #598766;
-  box-shadow: 0 4px 8px #598766;
   font-size: 25px;
   padding: 5%;
   font-size: 1.2rem;
@@ -65,27 +66,29 @@ body{
   margin-top: 5%;
   margin-bottom: 10px;
   background-color: #8FB68F;
-  color: #FFFFFF; 
+  color: #ffffff; 
 }
 #rules{
   margin-bottom: 5%;
 }
 .start-menu:hover{
-  background-color: white;
+  background-color: antiquewhite;
   color: black;
 }
 
 .modal-content{
   position: absolute;
-  top: 50%;
+  position: absolute;
+  top: 35%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 50%;
-  background-color: rgb(251,243,213);
+  background-color: rgb(89, 135, 102, 0.9);
+  border:3px solid #8FB68F;
+  box-shadow: 0 4px 8px #598766;
+  color: #ffffff ;
   padding: 10px;
-  height: 300px;
-  border-radius: 5px;
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+  height: 22%;
   z-index: 10;
   text-align: center;
   padding: 20px;
@@ -101,6 +104,7 @@ body{
   border: none;
   background: none;
 }
+
 .leagues > img{
   width: 100px;
   height: 50px;
@@ -136,11 +140,11 @@ body{
   border-radius: 6px;
   box-shadow: 0 4px 8px #598766;
   background-color: #8FB68F;
-  color: #FFFFFF; 
+  color: #ffffff; 
   font-size: 0.8rem;
 }
 .btn:hover{
-  color: #FFFFFF;
+  color: antiquewhite;
   cursor: pointer;
   height: 2.2rem;
   width: 84%;
@@ -176,7 +180,7 @@ body{
   height: 2rem;
   font-size: 1.2rem;
   background-color:  #598766;
-  color: #FFFFFF;
+  color: #ffffff;
   margin-right: 5px;
 }
 #next-btn:hover{
