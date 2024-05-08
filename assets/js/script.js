@@ -817,28 +817,26 @@ let leagueResult = '';
 function attachLeagueListener() {
     document.querySelector('#premier-league').addEventListener('click', function () {
         league = 'premier league';
-        console.log('The league is set to the Premier League');
         gameOpener2();
         leagueUpper(league);
     });
     document.querySelector('#scottish-league').addEventListener('click', function () {
         league = 'scottish league';
-        console.log('The league is set to the scottish premiership')
         gameOpener2();
         leagueUpper(league);
     });
     document.querySelector('#la-liga').addEventListener('click', function () {
         league = 'la liga';
-        console.log('The league is set to the Spanish La Liga')
         gameOpener2();
         leagueUpper(league);
     });
 };
 
+/*This function sets the first letter of the league to upper case for use in the quiz header*/
 function leagueUpper(league) {
     leagueResult = league.charAt(0).toUpperCase() + league.slice(1);
-    console.log(leagueResult);
 };
+/*this function allows for the return home buttons to take the user back to the start menu*/
 function returnHome() {
     let backArrows = document.querySelectorAll('.back-arrow');
     for (let i = 0; i < backArrows.length; i++) {
@@ -871,25 +869,25 @@ function diffChoice() {
     returnHome();
 };
 
+/*this function attachs event listeners to the difficulty options*/
 function attachDiffListener() {
     document.querySelector('#easy').addEventListener('click', setDifficulty);
     document.querySelector('#intermediate').addEventListener('click', setDifficulty);
     document.querySelector('#hard').addEventListener('click', setDifficulty);
 };
 
+/*this allows for the difficulties to be taken directly from the click event to be used in the quiz header*/
 let diffResult = ''
 function setDifficulty(event) {
     difficulty = event.target.id;
-    console.log(difficulty);
     gameOpener2();
     diffUpper(difficulty);
 };
-
+/*the function to set the click event output to a variable named diffResult*/
 function diffUpper(difficulty) {
     diffResult = difficulty
-    console.log(diffResult);
 };
-/*https://www.javatpoint.com/how-to-shuffle-an-array-in-javascript how to shuffle array*/
+/* This function shuffles the quiz questions each time a quiz is run */
 function shuffle(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -914,32 +912,29 @@ function startGame() {
     let noChoice = document.querySelector('.no-choice');
     let noDifficulty = document.querySelector('.no-difficulty')
     let noLeague = document.querySelector('.no-league');
-    console.log("League:", league);
-    console.log("Difficulty:", difficulty);
+
 
     // Check if difficulty is chosen but league is not
     if (difficulty && !league) {
-        console.log("Difficulty chosen without league");
+
         noLeague.classList.remove('hidden');
         attachCloseEventListener();
         return;
     }
     // Check if both league and difficulty are not chosen
     if (!league) {
-        console.log("No league chosen");
         noChoice.classList.remove('hidden');
         attachCloseEventListener();
         return;
     }
     // Check if league is chosen but difficulty is not
     if (!difficulty) {
-        console.log("No difficulty chosen");
         noDifficulty.classList.remove('hidden');
         attachCloseEventListener();
         return;
     }
 
-
+    /*if statements which determine the quiz questions dependent on league and difficulty choice*/
     if (league === 'premier league') {
         if (difficulty === 'easy') {
             questions = premEasyQs;
@@ -977,6 +972,7 @@ function startGame() {
         };
     }
 
+    /*quiz input to the mainscreen div once the league and difficulty are chosen*/
     if (questions.length > 0) {
         mainScreen.innerHTML = `
                 <div class='back-arrow'>
@@ -1000,6 +996,7 @@ function startGame() {
     }
 };
 
+/*Evemt listener for the close button on the modals*/
 function attachCloseEventListener() {
     const closeButtons = document.querySelectorAll('.close');
     closeButtons.forEach(button => {
@@ -1011,7 +1008,7 @@ function attachCloseEventListener() {
 }
 
 
-
+/*Function to populate the quiz buttons with the answers, and the question above the quiz buttons*/
 function showQuestion(questions) {
     const questionElement = document.querySelector('#question');
     const answerButtonsElement = document.querySelector('#answer-buttons');
@@ -1020,7 +1017,7 @@ function showQuestion(questions) {
     if (currentQuestionIndex < questions.length) {
         const currentQuestion = questions[currentQuestionIndex];
         questionElement.textContent = `${currentQuestionIndex + 1}. ${currentQuestion.question}`;
-        answerButtonsElement.innerHTML = ''; // Clear previous answers
+        answerButtonsElement.innerHTML = '';  /*Resets the question once the previous one has been submitted*/
 
         currentQuestion.answers.forEach(answer => {
             const button = document.createElement('button');
@@ -1036,7 +1033,6 @@ function showQuestion(questions) {
         nextBtn.style.display = 'none';
     } else {
         // Handle quiz end
-        console.log("Quiz finished. Score:", currentScore);
         if (currentScore > (questions.length - 1) && league === 'premier league') {
             mainScreen.innerHTML = `<div class="game-area"><h2>Quiz Complete</h2></div>
         <div class='quiz'>
@@ -1092,7 +1088,7 @@ function showQuestion(questions) {
 }
 
 
-
+/*Function to increment the score and disable the buttons for use once a question is selected*/
 function selectAnswer(e, questions) {
     const selectedButton = e.target;
     const correct = selectedButton.dataset.correct === 'true';
@@ -1119,7 +1115,7 @@ function selectAnswer(e, questions) {
     selectedButton.classList.add('selected');
     nextBtn.style.display = 'block'; // Show the next button
 }
-
+/*Function to proceed to the next question once the next button is selected*/
 function nextButtonHandle() {
     currentQuestionIndex++;
     showQuestion(questions); // Call showQuestion to update the quiz for the next question
