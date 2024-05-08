@@ -658,10 +658,10 @@ const laLigaHardQs = [
     {
         question: "Which club has the distinction of never being relegated from La Liga?",
         answers: [
-            { text: "Barcelona", correct: true },
-            { text: "Real Madrid", correct: true },
+            { text: "Eibar", correct: false },
+            { text: "Getafe", correct: false },
             { text: "Athletic Bilbao", correct: true },
-            { text: "All of the above", correct: true }
+            { text: "All of the above", correct: false }
         ]
     },
     {
@@ -678,7 +678,7 @@ const laLigaHardQs = [
         answers: [
             { text: "Iker Casillas", correct: false },
             { text: "Victor Valdes", correct: false },
-            { text: "Antoni Ramallets", correct: true },
+            { text: "Antoni Ramallets", correct: false },
             { text: "Jan Oblak", correct: true }
         ]
     },
@@ -851,7 +851,8 @@ function returnHome() {
 
 function diffChoice() {
     mainScreen.innerHTML =
-        `<div class="start-menu difficulty" id="easy">
+        `
+        <div class="start-menu difficulty" id="easy">
     <p>Beginner</p>
     <i class="fa-solid fa-star fa-2x star-gold"></i>
     </div>
