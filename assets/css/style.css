@@ -23,6 +23,7 @@ body{
   font-weight: 400;
   font-style: normal;
 }
+/*the main screen area where the start menu and game are held*/
 .main-screen{
   margin: 20px auto;
   width: 80%;
@@ -38,10 +39,11 @@ body{
   font-size: 1rem;
   margin-top: 40px;
 }
+/*hidden class for modals and buttons*/
 .hidden{
   display:none
 }
-
+/*welcome div that appears when a user opens the page*/
 .welcome{
   width: 60%;
   height:300px;
@@ -74,11 +76,12 @@ body{
 #rules{
   margin-bottom: 5%;
 }
+/*hover styling for start menu buttons*/
 .start-menu:hover{
   background-color: antiquewhite;
   color: black;
 }
-
+/*styling for pop up modals*/
 .modal-content{
   position: absolute;
   position: absolute;
@@ -110,6 +113,7 @@ body{
   border: none;
   background: none;
 }
+/*close button hover styling*/
 .close:hover{
   color: white;
 }
@@ -118,7 +122,7 @@ body{
   height: 50px;
   padding-top:5px;
 }
-
+/*back arrow styling*/
 .back-arrow{
   margin-left: 5px;
   margin-right: auto;
@@ -158,10 +162,11 @@ body{
   height: 2.2rem;
   width: 84%;
 }
+/*when the correct answer is selected*/
 .correct{
   background-color: #008000; 
 }
-
+/*Incorrect answer styling*/
 .incorrect{
   background-color: #FF0000;
 }
@@ -218,7 +223,7 @@ body{
   width: 140px;
   height: 230px;
 }
-
+/*media queries for responsive styling*/
 @media screen and (min-width: 920px){
 .modal-content{
     font-size: 1.5rem
