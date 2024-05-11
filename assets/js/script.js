@@ -50,7 +50,7 @@ const premEasyQs = [
             { text: "Mark Schwarzer", correct: false }
         ]
     }
-]
+];
 
 
 
@@ -69,7 +69,7 @@ const premMediumQs = [
         answers: [
             { text: "Sunderland", correct: false },
             { text: "Derby County", correct: true },
-            { text: "Aston Villar", correct: false },
+            { text: "Aston Villa", correct: false },
             { text: "Huddersfield Town", correct: false }
         ]
     },
@@ -145,7 +145,7 @@ const premMediumQs = [
             { text: "98 points", correct: false }
         ]
     }
-]
+];
 
 const premHardQs = [
     {
@@ -755,7 +755,7 @@ function gameOpener2() {
     </div>
     <div class="start-menu" id="rules">
         <p>Tutorial</p>
-    </div>`
+    </div>`;
         if (gameCompleted) {
             league = null;
             difficulty = null;
@@ -787,7 +787,7 @@ function attachEventListeners() {
             tutorial.classList.remove('hidden');
         });
     }
-};
+}
 
 
 function leagueChoice() {
@@ -805,7 +805,7 @@ function leagueChoice() {
     </div>
     <div class='back-arrow'>
     <i class="fa-solid fa-arrow-left"></i>
-    </div>`
+    </div>`;
     attachLeagueListener();
     returnHome();
 }
@@ -830,19 +830,19 @@ function attachLeagueListener() {
         gameOpener2();
         leagueUpper(league);
     });
-};
+}
 
 /*This function sets the first letter of the league to upper case for use in the quiz header*/
 function leagueUpper(league) {
     leagueResult = league.charAt(0).toUpperCase() + league.slice(1);
-};
+}
 /*this function allows for the return home buttons to take the user back to the start menu*/
 function returnHome() {
     let backArrows = document.querySelectorAll('.back-arrow');
     for (let i = 0; i < backArrows.length; i++) {
         backArrows[i].addEventListener('click', gameOpener2);
-    };
-};
+    }
+}
 
 
 /*this determines and logs the users difficulty choice*/
@@ -864,29 +864,29 @@ function diffChoice() {
     </div>
     <div class='back-arrow'>
     <i class="fa-solid fa-arrow-left"></i>
-    </div>`
+    </div>`;
     attachDiffListener();
     returnHome();
-};
+}
 
 /*this function attachs event listeners to the difficulty options*/
 function attachDiffListener() {
     document.querySelector('#easy').addEventListener('click', setDifficulty);
     document.querySelector('#intermediate').addEventListener('click', setDifficulty);
     document.querySelector('#hard').addEventListener('click', setDifficulty);
-};
+}
 
 /*this allows for the difficulties to be taken directly from the click event to be used in the quiz header*/
-let diffResult = ''
+let diffResult = '';
 function setDifficulty(event) {
     difficulty = event.target.id;
     gameOpener2();
     diffUpper(difficulty);
-};
+}
 /*the function to set the click event output to a variable named diffResult*/
 function diffUpper(difficulty) {
-    diffResult = difficulty
-};
+    diffResult = difficulty;
+}
 /* This function shuffles the quiz questions each time a quiz is run */
 function shuffle(array) {
     for (let i = array.length - 1; i > 0; i--) {
@@ -894,7 +894,7 @@ function shuffle(array) {
         [array[i], array[j]] = [array[j], array[i]];
     }
 }
-const allQuestions = [premEasyQs, premMediumQs, premHardQs, scotEasyQs, scotMediumQs, scotHardQs, laLigaEasyQs, laLigaMediumQs, laLigaHardQs]
+const allQuestions = [premEasyQs, premMediumQs, premHardQs, scotEasyQs, scotMediumQs, scotHardQs, laLigaEasyQs, laLigaMediumQs, laLigaHardQs];
 for (let i = 0; i < allQuestions.length; i++) {
     shuffle(allQuestions[i]);
 
@@ -910,7 +910,7 @@ let questions = [];
 /*Function to start the game*/
 function startGame() {
     let noChoice = document.querySelector('.no-choice');
-    let noDifficulty = document.querySelector('.no-difficulty')
+    let noDifficulty = document.querySelector('.no-difficulty');
     let noLeague = document.querySelector('.no-league');
 
 
@@ -945,8 +945,8 @@ function startGame() {
         }
         else {
             return;
-        };
-    };
+        }
+    }
     if (league === 'scottish league') {
         if (difficulty === 'easy') {
             questions = scotEasyQs;
@@ -957,8 +957,8 @@ function startGame() {
         }
         else {
             return;
-        };
-    };
+        }
+    }
     if (league === 'la liga') {
         if (difficulty === 'easy') {
             questions = laLigaEasyQs;
@@ -969,7 +969,7 @@ function startGame() {
         }
         else {
             return;
-        };
+        }
     }
 
     /*quiz input to the mainscreen div once the league and difficulty are chosen*/
@@ -994,7 +994,7 @@ function startGame() {
         noChoice.classList.remove('hidden');
         attachCloseEventListener();
     }
-};
+}
 
 /*Evemt listener for the close button on the modals*/
 function attachCloseEventListener() {
@@ -1041,7 +1041,7 @@ function showQuestion(questions) {
             <img src=assets/images/Premier_league_trophy_icon.png alt='Premier league trophy icon'>
             <button id='home-btn' class='btn' style='display: block;'>Return Home</button>
             </div>
-        </div>`
+        </div>`;
             const homeBtn = document.querySelector('#home-btn');
             homeBtn.addEventListener('click', gameOpener2);
             gameCompleted = true;
@@ -1054,7 +1054,7 @@ function showQuestion(questions) {
             <img src=assets/images/Liga_trophy.png alt='La Liga trophy icon'>
             <button id='home-btn' class='btn' style='display: block;'>Return Home</button>
             </div>
-        </div>`
+        </div>`;
             const homeBtn = document.querySelector('#home-btn');
             homeBtn.addEventListener('click', gameOpener2);
             gameCompleted = true;
@@ -1066,7 +1066,7 @@ function showQuestion(questions) {
             <div class='home-button'>
             <img src=assets/images/Spltrophy.png alt='SPFL trophy icon'>
             <button id='home-btn' class='btn' style='display: block;'>Return Home</button>
-            </div>`
+            </div>`;
             const homeBtn = document.querySelector('#home-btn');
             homeBtn.addEventListener('click', gameOpener2);
             gameCompleted = true;
@@ -1078,7 +1078,7 @@ function showQuestion(questions) {
             <div class='home-button'>
             <button id='home-btn' class='btn' style='display: block;'>Return Home</button>
             </div>
-        </div>`
+        </div>`;
             const homeBtn = document.querySelector('#home-btn');
             homeBtn.addEventListener('click', gameOpener2);
             gameCompleted = true;

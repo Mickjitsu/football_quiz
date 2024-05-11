@@ -8,7 +8,7 @@ This is a project I have been working on as part of the JavaScript assessment wi
 You can access the page live via github pages on the url below.
 https://mickjitsu.github.io/football_quiz/
 
-![Responsive image](assets/documentation/responsive_image.png)
+![Responsive image](assets/documentation/responsive_quiz.jpg)
 
 
 ## Table of Contents
@@ -37,96 +37,73 @@ https://mickjitsu.github.io/football_quiz/
 User Goals
 
 - Navigature clearly and effectively across the site
-- Find specific information they require
-- Read about the class schedule and equipment
-- Get in touch via our contact page.
+- Select their chosen league and difficulty
+- Take a quiz on their chosen league and difficulty
+- Have full control and be able to return to the home page at any stage to change the quiz type
 
 
 
 Site Owner Goals
 
 - Ensure the website is seamless for the user
-- Ensure the user can find exactly what they need
-- Promote the gym and the sport in general
-- Allow for possible members to contact us
-- Keep all interested parties up to date with relevant information
+- Ensure the user can play the quiz on all devices
+- Allow the user to play in their chosen league and in a difficulty that suits them
+- Provide a fun experience for the user to test their knowledge
+- Allow the user to partake in the quiz using any device that supports an internet browser and javascript
 
 
 ## Design
 ### Colour Scheme
-I used the website color-hex.com to find an appropriate colour scheme and decided on the shade and colour
-#BEA477. Along with this I chose a secondary colour #CEBB9A for certain sections, along with inverting the text colour
-#252525 for the header and footer. You can see a contrast grid of all colours used throughout the website, with a rating of AA or AAA for each colour palette used.
+I used the website color-hex.com to find an appropriate colour scheme and decided on the shade and colour which suited the background image of foorball greenery. Along with the background image, I used the colours #598766, rgb(251,243,213,0.7), rgb(89, 135, 102, 0.7), #ffffff, #8FB68F, antiquewhite, #008000 and #FF0000
 
-![contrast grid of colours](assets/documentation/contrast_grid_total.jpg)
+![contrast grid of colours](assets/documentation/contrast-quiz.jpg/)
 
 
 
 ### Typography
-I chose to stick with a sans-serif font type for the entirety of the webpage as it is very clear and easy to read for all users. Body font was 'Roboto', while headings were 'Bebas Neue' of the sans-serif family.
+I chose to stick with a sans-serif font type for the entirety of the webpage as it is very clear and easy to read for all users. The body font was 'Roboto'.
 ### Imagery
-The entirety of my gallery page was found from pexels.com along with the index hero image and the class photo page.owever many other images were used primarily from websites found on google. The coach images were from sherdog.com, a popular MMA site. The about hero image was from bjjfanactics.com and the gym photo from fittinsider.com.
-
-I understand in a real website I would need to have image rights for images used or use free stock sites like pexels or others to ensure I am not breaking any copyright laws.
+Not much imagerey was used throughout the page however the .png images for the league logos and the trophies were from Wikipedia.
 
 ### Wireframes
 I was unable to install balsamiq wireframing tool due to restrictions on the computer I am using, so I opted for a free tool online wireframe.cc . Although it was more difficult to use and didn't allow me plan as effectively as I would have liked, I made some rough wireframes for each page.
 
 
-![Wireframe for top of index page](assets/documentation/wireframe_1.jpg)
-![Wireframe for about page top half](assets/documentation/wireframe_2.jpg)
-![Wireframe for contact page](assets/documentation/wireframe_3.jpg)
+![mobile wireframe](assets/documentation/mobile_WF.jpg)
+![large screen wireframe](assets/documentation/large_WF.jpg)
 
 
 ## Features
 
-### Responsive Navigation Bar toggle
-This code was taken from the LoveRunning course to enable this feature using only CSS and HTML and is visible under the nav bar styles on styles.css page.
+### User choice to choose league and difficulty
 
-![nav bar toggle](assets/documentation/nav_bar.jpg)
-
-
-### Responseive map for directions
-![embedded google maps directions](assets/documentation/map.jpg)
+![Difficulty choice](assets/documentation/diff_choice.jpg)
+![League choice](assets/documentation/league_choice.jpg)
 
 
-### Footer with working social mediahyperlinks
-This code was also taken from the LoveRunning course for ease of use.
-
-![footer with social media icons](assets/documentation/footer.jpg)
-
-
-### Heading on index page with hyperlink to contact page
-
-![hyperlink to contact form](assets/documentation/index_link.jpg)
-
-
-### Working contact form which redirects to a thank you page
-
-![contact form](assets/documentation/contact_form_1.jpg)
-
-![Contact form redirect page](assets/documentation/contact_redirect.jpg)
-
-
-### Responsive flex box reviews which hide/appear depending on screen size
-![Flex review 1](assets/documentation/flex_1.jpg)
-![Flex review 1 and 2](assets/documentation/flex_1_2.jpg)
-![Flex review 1, 2 and 3](assets/documentation/flex_1_2_3.jpg)
+### Trophy for 10/10 or 5/5 score
+![Trophy at the end of the prem league quiz for all correct answers](assets/documentation/trophy.jpg)
 
 
 
-### Youtube video
-The embed code was taken from youtube, with adjustments made to styling for it to fit correctly on page.
-![screenshot of youtube video](assets/documentation/youtube_about.jpg)
+### Back arrow to return home at any time
 
-### Working 404 page.
-![404 page](assets/documentation/404_issue.jpg)
+![Return home arrow](assets/documentation/back_arrow.jpg)
+
+
+### 3 second loading welcome screen
+
+![Welcome screen with 3 second viewing](assets/documentation/welcome_screen.jpg)
+
+
+### Correct and incorrect button selection
+![404 page](assets/documentation/incorrect.jpg)
 
 
 ## Features to be Added
-I would like to add a feature that would send out an automatic email once a form has been completed letting the end user know that we have received their form submission and will get in touch with them personally while also including an information pack in the email. This could be done by using an API from a company like Twilio, Bird or Mailersend.
+I would like to add a timer feature to the quiz to make the harder difficulties not only be difficult due to the questions asked but also the time limit given to answer them.
 
-A clickable image thread where users can click on an image to open it as a carousel, and scroll through the gallery images by clicking on a toggle, rather than all images being full size.
+I would also like to add more leagues to the quiz for more variety of questions.
 
 
 ## Testing
@@ -134,40 +111,27 @@ A clickable image thread where users can click on an image to open it as a carou
 ### Validation of Code
 Index w3 validator
 
-![w3 validator pass for index HTML](assets/documentation/index_w3_1.jpg)
+![w3 validator pass for index HTML](assets/documentation/html_quiz.jpg)
 
 About page w3 validator
-![w3 validator pass for about HTML](assets/documentation/about_w3.jpg)
+![CSS validator for CSS](assets/documentation/quiz_css.jpg)
 
-Gallery page w3 validator
-![w3 validator pass for gallery HTML](assets/documentation/gallery_w3.jpg)
-
-Contact page w3 validator
-![w3 validator pass for contact HTML](assets/documentation/contact_w3.jpg)
-
-Signed page w3 validator
-![w3 validator pass for signed HTML](assets/documentation/signed_up_w3.jpg)
-404 page w3 validator
-![w3 validator pass for signed HTML](assets/documentation/404_w3.jpg)
-
-
-CSS Validator
-
-![CSS validator passs](assets/documentation/index_css.jpg)
+JShint validator for JS
+![w3 validator pass for gallery HTML](assets/documentation/jshint.jpg)
 
 
 
 ### Lighthouse
-Lighthouse results, it's worth noting that at time of testing my internet speed was not great, with a download speed of roughly 7mbps. Best practices score is due to cookies from the embedded google maps location at the bottom of the page.
+Lighthouse results, it's worth noting that at time of testing my internet speed was not great, with a download speed of roughly 7mbps.
 
-![Lighthouse results for index page](assets/documentation/lighthouse_test.jpg)
+![Lighthouse results for index page](assets/documentation/lighthouse_quiz.jpg)
 
 
 Common issue seems to be with image size and type used for mobile versions of the website. In the future I will procure more modern images suited for web design rather than jpg or png.
 
 ### Wave Webaim - accessibility testing
 Initially there was one error due to the label tag used for the nav toggle. More information on bug section.
-![Accessibility testing review from Wave](assets/documentation/wave_response.jpg)
+![Accessibility testing review from Wave](assets/documentation/wave_quiz.jpg)
 
 
 ### Manual Testing
@@ -180,71 +144,49 @@ This was tested using a google pixel 6 pro, iphone 11 and responsive mode on a l
 
 Format of the table below is as follows:
 
-| Feature being tested| Expected Outcome | Testing Performed | Actual Outcome | Result (Pass or fail) |
-| -------------------- | ---------------- | ----------------- | -------------- | --------------------- |
-| Header hyperlink index page| Refreshes current page | manually clicked | page refreshed | Result PASS|
-| Header hyperlink about page | directs to index page | manually clicked| directed to index page | Result PASS |
-| Header hyperlink gallery page | Directs to Index page | manually clicked | Directed to index page | Result PASS |
-| Header hyperlink contact page | directs to index page | manually clicked | directed to index page | result PASS |
-| Facebook hyperlink on index page| direct to social media sites | manually clicked all | All directed | Result PASS |
-| Youtube hyperlink on index page| direct to social media sites | manually clicked all | All directed | Result PASS |
-| Instagram hyperlink on index page| direct to social media sites | manually clicked all | All directed | Result PASS |
-| Twitter hyperlink on index page| direct to social media sites | manually clicked all | All directed | Result PASS |
-| Facebook hyperlink on about page| direct to social media sites  | manually clicked | All Directed | Results PASS |
-| Youtube hyperlink on about page| direct to social media sites  | manually clicked | All Directed | Results PASS |
-| Instagram hyperlink on about page| direct to social media sites  | manually clicked | All Directed | Results PASS |
-| Twitter hyperlink on about page| direct to social media sites  | manually clicked | All Directed | Results PASS |
-| Facebook hyperlink on Gallery page| direct to social media sites | manually clicked| All Directed  | Result PASS |
-| Youtube hyperlink on Gallery page| direct to social media sites | manually clicked| All Directed  | Result PASS |
-| Instagram hyperlink on Gallery page| direct to social media sites | manually clicked| All Directed  | Result PASS |
-| Twitter hyperlink on Gallery page| direct to social media sites | manually clicked| All Directed  | Result PASS |
-| Facebook hyperlink on contact page| direct to social media sites  | manually clicked | All Directed | Reult PASS |
-| Youtube hyperlink on contact page| direct to social media sites  | manually clicked | All Directed | Reult PASS |
-| Instagram hyperlink on contact page| direct to social media sites  | manually clicked | All Directed | Reult PASS |
-| Twitter hyperlink on contact page| direct to social media sites  | manually clicked | All Directed | Reult PASS |
-| Facebook hyperlink on signed-up page| direct to social media sites  | manually clicked | All Directed | Reult PASS |
-| Youtube hyperlink on signed-up page| direct to social media sites  | manually clicked | All Directed | Reult PASS |
-| Instagram hyperlink on signed-up page| direct to social media sites  | manually clicked | All Directed | Reult PASS |
-| Twitter hyperlink on signed-up page| direct to social media sites  | manually clicked | All Directed | Reult PASS |
-| Facebook hyperlink on 404 page| direct to social media sites  | manually clicked | All Directed | Reult PASS |
-| Youtube hyperlink on 404 page| direct to social media sites  | manually clicked | All Directed | Reult PASS |
-| Instagram hyperlink on 404 page| direct to social media sites  | manually clicked | All Directed | Reult PASS |
-| Twitter hyperlink on 404 page| direct to social media sites  | manually clicked | All Directed | Reult PASS |
-| Dropdown toggle index page| menu drops down and hyperlinks work | manually clicked | menu appears | Result PASS |
-| Dropdown toggle about page | menu drops down and hyperlinks work | manually clicked  | menu appears  | Result PASS |
-| Dropdown toggle Gallery page| menu drops down and hyperlinks work| manually clicked | menu appears  | Result PASS |
-| Dropdown toggle contact page | menu drops down and hyperlinks work| manually clicked  | menu appears | Result PASS  |
-| Youtube video about page| Video plays but not automatically | opened about page and clicked play | video only plays when clicked | Result PASS |
-| contact form submission required fields | Can't submit form unless all requried fields are checked| Tested every combination | Required fields prompted if not submitted correctly | result PASS |
-| contact form submission| redirected to thank you page | completed form and submitted | redireted to signedup.html | Result PASS |
+# Manual Testing Document
+
+| Feature Being Tested          | Expected Outcome                                              | Testing Performed                                | Actual Outcome                                      | Result (Pass or Fail) |
+|-------------------------------|---------------------------------------------------------------|--------------------------------------------------|-----------------------------------------------------|-----------------------|
+| Welcome Page Load Time        | 3-second load before the main page is visible                  | Manually loaded the welcome page                | Page loaded after 3 seconds                        | PASS                  |
+| Start Match Button           | Modal should appear if league/difficulty not chosen            | Manually clicked start match button             | Modal appeared as expected                          | PASS                  |
+| Start Match Button           | Quiz should start after selecting league/difficulty and clicking start | Manually clicked start match button      | Quiz started as expected                            | PASS                  |
+| Choose Difficulty Button     | Should direct to index page                                   | Manually clicked choose difficulty button       | Directed to index page as expected                  | PASS                  |
+| Choose League Button         | Should open a page to choose your league                       | Manually clicked choose league button          | Page to choose league opened as expected            | PASS                  |
+| Tutorial Button              | Should open a modal with instructions on how to start the match | Manually clicked tutorial button              | Modal with instructions opened as expected          | PASS                  |
+| Premier League Button        | Should set the league to Premier League                        | Manually clicked Premier League button         | League set to Premier League as expected            | PASS                  |
+| La Liga Button               | Should set the league to La Liga                               | Manually clicked La Liga button                | League set to La Liga as expected                   | PASS                  |
+| Scottish League Button       | Should set the league to the Scottish League                   | Manually clicked Scottish League button        | League set to Scottish League as expected           | PASS                  |
+| Easy Button                  | Should set the difficulty to easy                              | Manually clicked Easy button                   | Difficulty set to easy as expected                  | PASS                  |
+| Medium Button                | Should set the difficulty to medium                            | Manually clicked Medium button                 | Difficulty set to medium as expected                | PASS                  |
+| Hard Button                  | Should set the difficulty to hard                              | Manually clicked Hard button                   | Difficulty set to hard as expected                  | PASS                  |
+| Next Button (Quiz)           | Should forward to the next question                            | Manually clicked Next button on quiz           | Forwarded to the next question as expected          | PASS                  |
+| Back Arrow                   | Should bring the user back to the home page                    | Manually clicked back arrow                    | Brought back to the home page as expected           | PASS                  |
+| Return Home Button           | Should return the user to the home page                        | Manually clicked return home button            | Returned to the home page as expected               | PASS                  |
+| Answer Buttons (Quiz)        | Should work on each and every quiz question                    | Manually clicked answer buttons on quiz        | Answer buttons worked on all questions as expected  | PASS                  |
+| Incorrect buttons        | Should glow red if an incorrect answer is chosed                 | Manually clicked answer buttons on quiz        | Incorrect glows red when selected  | PASS                  |
+| Correct buttons        | Should glow green if an incorrect answer is chosed                 | Manually clicked answer button on quiz      | Correct glows red when selected  | PASS                  |
+| Prem league trophy       | Should appear if user gets all questions right                 | Manually answered all questions correctly    | league trophy photo appears  | PASS                  |
+| Scottish league trophy       | Should appear if user gets all questions right                 | Manually answered all questions correctly    | league trophy photo appears  | PASS                  |
+| La Liga trophy       | Should appear if user gets all questions right                 | Manually answered all questions correctly    | league trophy photo appears  | PASS                  |
+| Close modal buttons      | Should close the modals once they are clicked                | Manually clicked the close toggle for each modal    | Modal close as expected  | PASS                  |
+
 
 
 
 ## Bug resolutions
 
-When writing the html and CSS code for this website, some bugs were found and rectified along the way.
-
-A major bug was the stretching of the Hero image on the index.html page. Due to the size of the image being used, on large screens this image would become stretched and off centre.
-
-To fix this, I used a larger version of the same image (900x) and updated the CSS in a media query for screens of 900px and more to use this image, and update the positional values of the image. The CSS used to overcome this bug is shown below.
+When writing the javascript code for this website, I came across numerous bugs. One initial bug that I came across was the next button was shifting the text on the quiz up towards the top of the div, once it was made visible. To get over this, I instead used a fixed height for the main screen div, so that it didn't need to grow when the next button was made visible.
 
 
-![Media query to fix hero image bug](assets/documentation/bug_1.jpg)
+Another issue I had was that I couldn't shuffle the quiz questions and answers using solely a for loop. I then searched online and found a way this can be done. I made changes to the code so that it would shuffle both the questions and answers and implemented it to the shuffle loop in my JS code. I got the initial help and inspiration for this in the link below.
 
-Another bug that was found was on the contact form. The contact form page would submit regardless of whether any class choices or contact information was added or not. This was due to the HTML code for the form not containing a required field. This was amended upon finding the issue when conducting manual testing.
-
-When validating the page using wave, a bug was found due to the label tag being empty in the form that was used to create the navigation toggle as it was done purely using html and css. This was fixed due to help from the documentation below.
-https://css-tricks.com/inclusively-hidden/
-
-
-![CSS code used for this fix](assets/documentation/bug_2.jpg)
-
-The final bug noticed when creating this website was that the schedule listed in the about page shows as pixelated when testing the responsiveness for smaller screens. This has been tested using 3 different mobile devices however and the image does not appear pixelated, and can be viewed/zoomed in as most images of this type would be on a mobile device.
+https://www.javatpoint.com/how-to-shuffle-an-array-in-javascript
 
 
 ## Technologies Used
 
-This project was done solely using HTML and CSS, along with vs code and gitpod.
+This project was done solely using HTML, CSS and JavaScript along with vs code and gitpod.
 
 
 **Cloning the repository**
@@ -259,14 +201,14 @@ Run the clone command:
 
 To Fork this repository and have a version of this on your personal account to make changes, customisation and amendments, please do the following.
 
-Go to the GitHub page of the repository : https://github.com/Mickjitsu/roadhouse_BJJ
+Go to the GitHub page of the repository : https://github.com/Mickjitsu/football_quiz/tree/main
 Click on the "Fork" button, usually found at the top-right corner of the page.
 
 After forking, you will have a copy of the repository in your GitHub account. You can then clone your forked version to your local machine by following the "Cloning the Repository" steps, using the URL of your fork.
 
 To view the repository on the local machine:
 
-1. Navigate to the Project Directory: : cd /roadhouse_BJJ
+1. Navigate to the Project Directory: : cd //football_quiz
 
 2. Open the Website: Open the main index.html page in a browser or the folder in a code editory
 
@@ -283,11 +225,11 @@ Firstly clone or fork the repository following the steps above. Once that is don
 
 ## Credits
 
-The images of this site came from pexels.com , sherdog.com, bjjfanactics.com and fittinsider.com.
+The images of this site came from wikipedia.com
 
-The video came from the grappling academys youtube channel. The schedule was created using Abode.com free schedule maker
+The guidance I had on this was from the current course I am doing on code institute, along with memory of previous courses I have completed on Udemy which helped with the liges of modals.
 
 ## Acknowledgements
-I would like to thank my partner for encouraging me to continue on when I was struggling at the start of the course, my family for encouraging me to keep studying despite going through a bereavement, and my mentor Matt for helping me along the way with pre, mid point and final calls!
+I would like to thank my partner for encouraging me to continue on when I was struggling at the start of the course, my family for encouraging me to keep studying despite going through a bereavement, and my mentor Matt for helping me along the way with pre, mid point and final calls! This year has been incredibly hard, however making the time to get this done no matter the issues that I face around me make it all worth while.
 
 [Back to top](#introduction)
